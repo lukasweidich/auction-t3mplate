@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const ActiveLink = ({ href, children, ...rest }) => {
+const InternalLink = ({ href, children, ...rest }) => {
   const router = useRouter();
 
   let className = children.props.className || "";
@@ -17,4 +17,4 @@ const ActiveLink = ({ href, children, ...rest }) => {
   );
 };
 
-export default ActiveLink;
+export default InternalLink;

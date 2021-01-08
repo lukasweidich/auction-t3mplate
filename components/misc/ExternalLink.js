@@ -6,7 +6,6 @@ const ExternalLink = ({ children, noIcon, internal, ...rest }) => {
       {...rest}
       target={!internal ? "_blank" : ""}
       rel={!internal ? "noopener noreferrer" : ""}
-      style={{ fontWeight: 600 }}
     >
       {children} {!noIcon && <i className="fa fa-external-link-alt" />}
     </a>

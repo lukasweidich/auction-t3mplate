@@ -1,13 +1,13 @@
 import React from "react";
 import TitleAndDesc from "../components/meta/TitleAndDesc";
 
-const generator = () => {
+const faq = () => {
   return (
     <>
       <TitleAndDesc title="generator-title" desc="generator-desc" i18nKey />
-      <p>generator</p>
+      <p>faq</p>
     </>
   );
 };
 
-export default generator;
+export default faq;

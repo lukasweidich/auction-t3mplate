@@ -1,13 +1,13 @@
 import React from "react";
 import TitleAndDesc from "../components/meta/TitleAndDesc";
 
-const index = () => {
+const imprint = () => {
   return (
     <>
       <TitleAndDesc title="index-title" desc="index-desc" i18nKey />
-      <p>index</p>
+      <p>imprint</p>
     </>
   );
 };
 
-export default index;
+export default imprint;
