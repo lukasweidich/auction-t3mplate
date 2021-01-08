@@ -6,10 +6,7 @@ import XD from "../components/i18ntest";
 const index = () => {
   return (
     <>
-      <TitleAndDesc
-        title="Auction Template - Generate free eBay descriptions on the fly"
-        desc="Free and easy to use tool for your eBay listings. The best editor to load your ads, and to create and download responsive descriptions with custom themes."
-      />
+      <TitleAndDesc title="index-title" desc="index-desc" i18nKey />
       <XD />
     </>
   );

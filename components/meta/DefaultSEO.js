@@ -53,7 +53,6 @@ const DefaultSEO = () => {
     "template",
     "artikelbeschreibung",
   ];
-  const language = "de";
   const googleSiteVerification = "";
   const url = "https://auction-template.de";
   const favicon = "/favicon.ico";
@@ -63,8 +62,6 @@ const DefaultSEO = () => {
     <Head>
       <meta charSet="utf-8" />
       <meta property="content-type" content="text/html; charset=UTF-8" />
-      <meta httpEquiv="language" content={language} />
-      <meta name="language" content={language} />
       <meta name="keywords" content={keywords.join(",")} />
       <meta name="author" content={name} />
       <meta name="copyright" content={name} />

@@ -1,4 +1,6 @@
 {
   "title": "Willkommen bei React und react-i18next",
-  "lorem": "Lorem ipsum DE"
+  "lorem": "Lorem ipsum DE",
+  "index-title": "TITEL INDEX",
+  "index-desc": "BESCHR INDEX"
 }
