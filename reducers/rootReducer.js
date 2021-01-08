@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import generalSettingsReducer from "./generalSettingsReducer";
+import applicationSettingsReducer from "./applicationSettingsReducer";
 import itemReducer from "./itemReducer";
 import userItemsReducer from "./userItemsReducer";
 
 export const rootReducer = combineReducers({
-  generalSettings: generalSettingsReducer,
+  applicationSettings: applicationSettingsReducer,
   item: itemReducer,
   userItems: userItemsReducer,
 });

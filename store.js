@@ -4,11 +4,11 @@ import { rootReducer } from "./reducers/rootReducer";
 const { composeWithDevTools } = require("redux-devtools-extension");
 import { getCookie } from "./src/utils/functions/cookieUtils";
 
-const tokenFromCookies = getCookie({ key: "token" });
-const userFromCookies = getCookie({ key: "user" });
-const userInfoFromCookies = getCookie({ key: "userInfo" });
+const languageFromCookies = getCookie({ key: "language" });
 
-const initialState = {};
+const initialState = {
+  applicationSettings: { language: languageFromCookies },
+};
 
 const middleware = [thunk];
 

@@ -5,7 +5,7 @@ import {
   GET_SELLERS_ITEMS_PAGE_NUMBER,
   GET_SELLERS_ITEMS_ENTRIES_PER_PAGE,
 } from "../../../src/utils/constants/ebayApiEndpoints";
-import { getMappingFromSiteId } from "../../../src/utils/constants/eBaySiteIdMappings";
+import { getMappingFromSiteId } from "../../../src/utils/constants/ebaySiteIdMappings";
 import { defaultSiteId } from "../../../src/utils/constants/ebayApiDefaults";
 import { EBAY_FAILURE } from "../../../src/utils/constants/ebayApiStatusCodes";
 import { prettyPrintErrorObject } from "../../../src/utils/functions/prettyPrint";
