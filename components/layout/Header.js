@@ -1,18 +1,34 @@
-import { Menu, Dropdown } from "antd";
-import React from "react";
+import { Menu, Dropdown, Divider } from "antd";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import InternalLink from "../misc/InternalLink";
-import { LINK_SEPARATOR } from "../../src/utils/constants/applicationConstants";
+import {
+  DEFAULT_LANGUAGE,
+  LINK_SEPARATOR,
+} from "../../src/utils/constants/applicationConstants";
 import withSeparator from "../../src/utils/functions/withSeparator";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../actions/applicationSettingsActions";
+import { getFlagIconIdFromLanguage } from "../../src/utils/functions/languageUtils";
 
 const Header = () => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
-  const { flagId } = useSelector((state) => state.applicationSettings);
+
+  const { flagId: currentFlagId } = useSelector(
+    (state) => state.applicationSettings
+  );
+
+  const [flagId, setFlagId] = useState(
+    getFlagIconIdFromLanguage(DEFAULT_LANGUAGE)
+  );
+
   //TODO: find way to properly display flag for current language in header
+  useEffect(() => {
+    setFlagId(currentFlagId);
+  }, [currentFlagId]);
+
   const handleLanguageSet = (language) => {
     i18n.changeLanguage(language);
     dispatch(setLanguage({ language }));
@@ -36,7 +52,13 @@ const Header = () => {
   return (
     <header>
       <Container>
-        <p
+        <Divider />
+        <h2>
+          <InternalLink href="/">
+            <a>Auction Template</a>
+          </InternalLink>
+        </h2>
+        <h3
           style={{
             display: "flex",
             flexDirection: "row",
@@ -45,40 +67,29 @@ const Header = () => {
           }}
         >
           <span>
-            <InternalLink href="/">
-              <a>Auction Template</a>
-            </InternalLink>
-          </span>
-          <span>
             {withSeparator(
               [
                 <InternalLink href="/">
                   <a>Home</a>
                 </InternalLink>,
-                <InternalLink href="/generator">
-                  <a>Generator</a>
+                <InternalLink href="/editor">
+                  <a>Editor</a>
                 </InternalLink>,
                 <InternalLink href="/faq">
                   <a>FAQ</a>
                 </InternalLink>,
-                <Dropdown
-                  overlay={menu}
-                  trigger={["click"]}
-                  placement="bottomRight"
-                >
-                  <a>{t("language")}</a>
-                </Dropdown>,
               ],
               LINK_SEPARATOR
             )}
           </span>
-        </p>
+          <Dropdown overlay={menu} trigger={["click"]} placement="bottomRight">
+            <a>
+              <span className={`flag-icon flag-icon-${flagId}`}></span>
+            </a>
+          </Dropdown>
+        </h3>
+        <Divider />
       </Container>
-      <style jsx>{`
-        p {
-          margin: 1em 0;
-        }
-      `}</style>
     </header>
   );
 };

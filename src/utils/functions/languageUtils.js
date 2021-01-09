@@ -1,11 +1,11 @@
-import { DEFAULT_FLAG_ID } from "../constants/applicationConstants";
+import { DEFAULT_LANGUAGE } from "../constants/applicationConstants";
 
 export const getFlagIconIdFromLanguage = (language) => {
   switch (language) {
     case "en":
       return "gb";
     case null:
-      return DEFAULT_FLAG_ID;
+      return getFlagIconIdFromLanguage(DEFAULT_LANGUAGE);
     default:
       return language;
   }
