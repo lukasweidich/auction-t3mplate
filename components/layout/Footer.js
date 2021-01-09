@@ -1,4 +1,3 @@
-import { Divider } from "antd";
 import React from "react";
 import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
@@ -12,7 +11,6 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Divider />
         <p
           style={{
             display: "flex",
@@ -23,7 +21,9 @@ const Footer = () => {
         >
           <span>
             © {new Date().getFullYear()}{" "}
-            <ExternalLink href="https://quikk.de">QUIKK</ExternalLink>
+            <ExternalLink href="https://quikk.de" noIcon>
+              QUIKK
+            </ExternalLink>
           </span>
           <span>
             {withSeparator(

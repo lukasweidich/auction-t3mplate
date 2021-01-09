@@ -4,7 +4,7 @@ import TitleAndDesc from "../components/meta/TitleAndDesc";
 const generator = () => {
   return (
     <>
-      <TitleAndDesc title="generator-title" desc="generator-desc" i18nKey />
+      <TitleAndDesc title="generator:title" desc="generator:desc" i18nKey />
       <p>generator</p>
     </>
   );

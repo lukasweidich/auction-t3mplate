@@ -1,7 +1,8 @@
 import Cookies from "js-cookie";
+import { COOKIE_DURATION_IN_DAYS } from "../constants/applicationConstants";
 
 export const saveCookie = ({ key, value }) => {
-  Cookies.set(key, JSON.stringify(value), { expires: 7 });
+  Cookies.set(key, JSON.stringify(value), { expires: COOKIE_DURATION_IN_DAYS });
 };
 
 export const getCookie = ({ key }) =>

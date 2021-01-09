@@ -1,18 +1,18 @@
-import { Divider, Menu, Dropdown } from "antd";
+import { Menu, Dropdown } from "antd";
 import React from "react";
 import { Container } from "react-bootstrap";
 import InternalLink from "../misc/InternalLink";
 import { LINK_SEPARATOR } from "../../src/utils/constants/applicationConstants";
 import withSeparator from "../../src/utils/functions/withSeparator";
 import { useTranslation } from "react-i18next";
-import { RocketTwoTone, DownOutlined } from "@ant-design/icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../actions/applicationSettingsActions";
 
 const Header = () => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
-
+  const { flagId } = useSelector((state) => state.applicationSettings);
+  //TODO: find way to properly display flag for current language in header
   const handleLanguageSet = (language) => {
     i18n.changeLanguage(language);
     dispatch(setLanguage({ language }));
@@ -46,9 +46,7 @@ const Header = () => {
         >
           <span>
             <InternalLink href="/">
-              <a>
-                <RocketTwoTone /> Auction Template
-              </a>
+              <a>Auction Template</a>
             </InternalLink>
           </span>
           <span>
@@ -63,17 +61,18 @@ const Header = () => {
                 <InternalLink href="/faq">
                   <a>FAQ</a>
                 </InternalLink>,
-                <Dropdown overlay={menu}>
-                  <a>
-                    {t("language")} <DownOutlined />
-                  </a>
+                <Dropdown
+                  overlay={menu}
+                  trigger={["click"]}
+                  placement="bottomRight"
+                >
+                  <a>{t("language")}</a>
                 </Dropdown>,
               ],
               LINK_SEPARATOR
             )}
           </span>
         </p>
-        <Divider />
       </Container>
       <style jsx>{`
         p {

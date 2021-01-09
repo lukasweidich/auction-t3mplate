@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
+import { TITLE_SEPARATOR } from "../../src/utils/constants/applicationConstants";
 
 const TitleAndDesc = ({ title, desc, i18nKey }) => {
   const {
@@ -16,7 +17,7 @@ const TitleAndDesc = ({ title, desc, i18nKey }) => {
 
   const router = useRouter();
   const isHome = router.pathname === "/";
-  title = isHome ? title : `${title} - Auction Template`;
+  title = isHome ? title : `${title} ${TITLE_SEPARATOR} ${t("title-suffix")}`;
   return (
     <Head>
       <title>{title}</title>

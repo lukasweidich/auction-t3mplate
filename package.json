@@ -16,6 +16,8 @@
     "dotenv": "^8.2.0",
     "flag-icon-css": "^3.5.0",
     "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.0.21",
     "js-cookie": "^2.2.1",
     "next": "10.0.5",
     "next-images": "^1.6.2",
