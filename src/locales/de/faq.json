@@ -1,4 +1,50 @@
 {
-  "title": "FAQ: Über den Editor",
-  "desc": "Wie man Auction Template erfolgreich verwendet"
+  "title": "$t(faq:heading): Wie funktioniert Auction Template?",
+  "desc": "Häufig gestellte Fragen zu Auction Template, Preisen, Leistungen, Kontakt, Support und Feature Requests.",
+  "heading": "FAQ",
+  "subheading": "$t(faq:desc)",
+  "1": {
+    "q": "Was ist Auction Template?",
+    "a": "Auction Template ermöglicht das automatisierte Erstellen von attraktiven Produktbeschreibungen für bestehende eBay Inserate. Im Gegensatz zu anderen Lösungen im Internet ist unser Editor vollständig automatisiert und mit offiziellen eBay Schnittstellen verbunden, sodass keine manuelle Doppelpflege der Produktinformationen erforderlich ist."
+  },
+  "2": {
+    "q": "Was unterscheidet Auction Template von der Konkurrenz?",
+    "a": ""
+  },
+  "3": {
+    "q": "Ist Auction Template sicher?",
+    "a": ""
+  },
+  "4": {
+    "q": "Ist Auction Template eBay Richtlinien konform?",
+    "a": ""
+  },
+  "5": {
+    "q": "Ist Auction Template wirklich kostenlos?",
+    "a": ""
+  },
+  "6": {
+    "q": "Wie kann ich ein eBay Produkt einladen?",
+    "a": ""
+  },
+  "7": {
+    "q": "Wie viele Auktionsvorlagen kann ich mit Auction Template erstellen?",
+    "a": ""
+  },
+  "8": {
+    "q": "Kann ich Auktionsvorlagen für mehrere eBay Konten erstellen?",
+    "a": ""
+  },
+  "9": {
+    "q": "Lassen sich die generierten Auktionsvorlagen anpassen?",
+    "a": ""
+  },
+  "10": {
+    "q": "Gibt es Vorteile für Gewerbetreibende?",
+    "a": ""
+  },
+  "11": {
+    "q": "Wie kann ich die Entwickler kontaktieren?",
+    "a": ""
+  }
 }
