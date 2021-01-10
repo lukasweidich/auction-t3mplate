@@ -17,15 +17,15 @@ const Footer = () => {
           <span>
             {withSeparator(
               [
-                <InternalLink href="/about">
-                  <a>{t("about")}</a>
-                </InternalLink>,
                 <InternalLink href="/imprint">
                   <a>{t("imprint")}</a>
                 </InternalLink>,
                 <InternalLink href="/privacy">
                   <a>{t("privacy")}</a>
                 </InternalLink>,
+                <ExternalLink href="https://quikk.de/kontakt">
+                  {t("contact")}
+                </ExternalLink>,
               ],
               LINK_SEPARATOR
             )}
@@ -33,9 +33,7 @@ const Footer = () => {
         </p>
         <p>
           © {new Date().getFullYear()}{" "}
-          <ExternalLink href="https://quikk.de" noIcon>
-            QUIKK
-          </ExternalLink>
+          <ExternalLink href="https://quikk.de">QUIKK</ExternalLink>
         </p>
       </Container>
     </footer>
