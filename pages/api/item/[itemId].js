@@ -11,13 +11,13 @@ export default async (req, res) => {
   switch (method) {
     case "GET":
       const {
-        data: { Item: item, Ack: status, Errors: errors },
+        data: { Item: item, Ack: status, Errors: errorArray },
       } = await Axios.get(buildEndpointForItem({ itemId, siteId }));
 
       if (item && status !== EBAY_FAILURE) {
         res.status(200).json({ item });
       } else {
-        res.status(404).json({ error: prettyPrintErrorArray(errors) });
+        res.status(404).json({ error: prettyPrintErrorArray(errorArray) });
       }
 
       break;

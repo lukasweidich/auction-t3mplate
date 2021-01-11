@@ -1,8 +1,6 @@
-import Axios from "axios";
 import { EBAY_FAILURE } from "../../../src/utils/constants/ebayApiStatusCodes";
+import getAllUserItemsRecursively from "../../../src/utils/functions/getAllUserItemsRecursively";
 import { prettyPrintErrorObject } from "../../../src/utils/functions/prettyPrint";
-import { buildEndpointForUserItems } from "../../../src/utils/functions/ebayEndpointBuilder";
-import { parseStringPromise } from "xml2js";
 
 export default async (req, res) => {
   const {
@@ -11,21 +9,13 @@ export default async (req, res) => {
   } = req;
   switch (method) {
     case "GET":
-      const { data: dataInXml } = await Axios.get(
-        buildEndpointForUserItems({ userId, siteId })
-      );
-      const dataInJson = await parseStringPromise(dataInXml, {
-        explicitArray: false,
+      const { items, errorObject, status } = await getAllUserItemsRecursively({
+        userId,
+        siteId,
+        allUserItems: [],
       });
-      const {
-        findItemsAdvancedResponse,
-        findItemsAdvancedResponse: { ack: status, errorMessage: errorObject },
-      } = dataInJson;
 
-      if (status !== EBAY_FAILURE) {
-        const {
-          searchResult: { item: items },
-        } = findItemsAdvancedResponse;
+      if (items && status !== EBAY_FAILURE) {
         res.status(200).json({ items });
       } else {
         res.status(404).json({ error: prettyPrintErrorObject(errorObject) });
