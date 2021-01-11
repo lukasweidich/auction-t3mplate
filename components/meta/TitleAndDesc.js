@@ -17,7 +17,7 @@ const TitleAndDesc = ({ title, desc, i18nKey }) => {
 
   const router = useRouter();
   const isHome = router.pathname === "/";
-  title = isHome ? title : `${title} ${TITLE_SEPARATOR} ${t("title-suffix")}`;
+  title = isHome ? title : `${title} ${TITLE_SEPARATOR} ${t("app-name")}`;
   return (
     <Head>
       <title>{title}</title>

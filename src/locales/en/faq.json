@@ -1,6 +1,6 @@
 {
   "title": "$t(faq:heading): How does Auction Template work?",
-  "desc": "Frequently asked questions regarding Auction Template, pricing, features, contact, support and feature requests.",
+  "desc": "Frequently asked questions regarding Auction Template, pricing, features, contact and support.",
   "heading": "FAQ",
   "subheading": "$t(faq:desc)",
   "1": {

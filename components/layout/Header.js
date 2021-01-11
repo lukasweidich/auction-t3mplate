@@ -9,10 +9,12 @@ import { setLanguage } from "../../actions/applicationSettingsActions";
 import { getFlagIconIdFromLanguage } from "../../src/utils/functions/languageUtils";
 import {
   HomeOutlined,
-  EditOutlined,
+  FormOutlined,
   QuestionCircleOutlined,
   InfoCircleOutlined,
+  MenuOutlined,
 } from "@ant-design/icons";
+import { Visible, Hidden } from "react-grid-system";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -34,6 +36,29 @@ const Header = () => {
     i18n.changeLanguage(language);
     dispatch(setLanguage({ language }));
   };
+
+  const internalLinks = [
+    <InternalLink href="/">
+      <a>
+        <HomeOutlined /> Home
+      </a>
+    </InternalLink>,
+    <InternalLink href="/editor">
+      <a>
+        <FormOutlined /> Editor
+      </a>
+    </InternalLink>,
+    <InternalLink href="/faq">
+      <a>
+        <QuestionCircleOutlined /> FAQ
+      </a>
+    </InternalLink>,
+    <InternalLink href="/about">
+      <a>
+        <InfoCircleOutlined /> {t("about")}
+      </a>
+    </InternalLink>,
+  ];
 
   const FlagSelectorMenu = (
     <Menu>
@@ -62,11 +87,38 @@ const Header = () => {
     </Dropdown>
   );
 
+  const MobileNavigationMenu = (
+    <Menu>
+      {internalLinks.map((link, i) => {
+        return <Menu.Item key={i}>{link}</Menu.Item>;
+      })}
+    </Menu>
+  );
+
+  const MobileNavigationDropdown = () => {
+    return (
+      <Dropdown
+        overlay={MobileNavigationMenu}
+        trigger={["click"]}
+        placement="bottomLeft"
+      >
+        <a>
+          <MenuOutlined /> {t("menu")}
+        </a>
+      </Dropdown>
+    );
+  };
+
   return (
     <header>
       <Container>
         <Divider />
-        <h2
+        <h2>
+          <InternalLink href="/">
+            <a>Auction Template</a>
+          </InternalLink>
+        </h2>
+        <h3
           style={{
             display: "flex",
             flexDirection: "row",
@@ -74,34 +126,17 @@ const Header = () => {
             justifyContent: "space-between",
           }}
         >
-          <InternalLink href="/">
-            <a>Auction Template</a>
-          </InternalLink>
+          <Visible xs>
+            <MobileNavigationDropdown />
+          </Visible>
+          <Hidden xs>
+            <Space size="large">
+              {internalLinks.map((link, i) =>
+                React.cloneElement(link, { key: i })
+              )}
+            </Space>
+          </Hidden>
           <FlagSelectorDropdown />
-        </h2>
-        <h3>
-          <Space size="large">
-            <InternalLink href="/">
-              <a>
-                <HomeOutlined /> Home
-              </a>
-            </InternalLink>
-            <InternalLink href="/editor">
-              <a>
-                <EditOutlined /> Editor
-              </a>
-            </InternalLink>
-            <InternalLink href="/faq">
-              <a>
-                <QuestionCircleOutlined /> FAQ
-              </a>
-            </InternalLink>
-            <InternalLink href="/about">
-              <a>
-                <InfoCircleOutlined /> {t("about")}
-              </a>
-            </InternalLink>
-          </Space>
         </h3>
         <Divider />
       </Container>
