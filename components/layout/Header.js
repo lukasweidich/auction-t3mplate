@@ -64,12 +64,16 @@ const Header = () => {
     <Menu>
       <Menu.Item>
         <a onClick={() => handleLanguageSet("de")}>
-          <span className="flag-icon flag-icon-de" />
+          <span
+            className={`flag-icon flag-icon-${getFlagIconIdFromLanguage("de")}`}
+          />
         </a>
       </Menu.Item>
       <Menu.Item>
         <a onClick={() => handleLanguageSet("en")}>
-          <span className="flag-icon flag-icon-gb" />
+          <span
+            className={`flag-icon flag-icon-${getFlagIconIdFromLanguage("en")}`}
+          />
         </a>
       </Menu.Item>
     </Menu>
@@ -110,7 +114,15 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header
+      style={{
+        position: "fixed",
+        height: "var(--header-height)",
+        width: "100%",
+        zIndex: "var(--header-z-index)",
+        background: "#fff",
+      }}
+    >
       <Container>
         <Divider />
         <h2>

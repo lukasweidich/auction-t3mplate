@@ -13,6 +13,7 @@ import { Container } from "react-bootstrap";
 import { Provider } from "react-redux";
 import store from "../store";
 import { BackTop } from "antd";
+import CookieConsentModal from "../components/misc/CookieConsentModal";
 
 const MyApp = ({ Component, pageProps, locale }) => {
   return (
@@ -27,6 +28,7 @@ const MyApp = ({ Component, pageProps, locale }) => {
       </main>
       <Footer />
       <BackTop />
+      <CookieConsentModal />
     </Provider>
   );
 };
