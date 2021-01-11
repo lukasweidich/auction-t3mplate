@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - node
 before_install:
-  - npm update
+  - npm update --legacy-peer-deps
 install:
   - npm install
 script:
