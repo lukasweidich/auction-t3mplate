@@ -1,11 +1,16 @@
-import { SET_LANGUAGE } from "../actions/types";
+import { SET_LANGUAGE, SET_SITE_ID } from "../actions/types";
 
 const initialState = {};
 
-const authReducer = (state = initialState, action) => {
+const applicationSettingsReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case SET_LANGUAGE:
+      return {
+        ...state,
+        ...payload,
+      };
+    case SET_SITE_ID:
       return {
         ...state,
         ...payload,
@@ -15,4 +20,4 @@ const authReducer = (state = initialState, action) => {
   }
 };
 
-export default authReducer;
+export default applicationSettingsReducer;

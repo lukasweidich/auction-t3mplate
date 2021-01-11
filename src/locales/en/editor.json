@@ -1,4 +1,10 @@
 {
   "title": "Create a new Auction Template",
-  "desc": "Automatically create a new Auction Template based on your existing listings"
+  "desc": "Automatically create a new Auction Template based on your existing listings",
+  "heading": "Editor",
+  "item-input": {
+    "heading": "Load eBay listing",
+    "item-number-known": "Load listing by eBay id",
+    "select-ebay-country": "eBay country"
+  }
 }

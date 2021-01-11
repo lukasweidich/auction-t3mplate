@@ -1,4 +1,10 @@
 {
   "title": "Ein neues Auction Template erstellen",
-  "desc": "Erstellen Sie ein neues, automatisiertes Auction Template auf Grundlage Ihrer Inserate"
+  "desc": "Erstellen Sie ein neues, automatisiertes Auction Template auf Grundlage Ihrer Inserate",
+  "heading": "Editor",
+  "item-input": {
+    "heading": "eBay Inserat einladen",
+    "item-number-known": "Inserat anhand eBay ID einladen",
+    "select-ebay-country": "eBay Standort"
+  }
 }

@@ -1,14 +1,7 @@
 import Axios from "axios";
-import {
-  GET_SINGLE_ITEM_ENDPOINT,
-  GET_SINGLE_ITEM_SELECTOR,
-  GET_SINGLE_ITEM_VERSION,
-  GET_SINGLE_ITEM_RESPONSE_ENCODING,
-} from "../../../src/utils/constants/ebayApiEndpoints";
-import { defaultSiteId } from "../../../src/utils/constants/ebayApiDefaults";
 import { EBAY_FAILURE } from "../../../src/utils/constants/ebayApiStatusCodes";
 import { prettyPrintErrorArray } from "../../../src/utils/functions/prettyPrint";
-require("dotenv").config();
+import { buildEndpointForItem } from "../../../src/utils/functions/ebayEndpointBuilder";
 
 export default async (req, res) => {
   const {
@@ -17,18 +10,16 @@ export default async (req, res) => {
   } = req;
   switch (method) {
     case "GET":
-      const appliedSiteId = siteId ?? defaultSiteId;
-      const { data } = await Axios.get(
-        `${GET_SINGLE_ITEM_ENDPOINT}&appid=${process.env.EBAY_APP_ID}&siteid=${appliedSiteId}&ItemID=${itemId}&${GET_SINGLE_ITEM_VERSION}&${GET_SINGLE_ITEM_RESPONSE_ENCODING}&${GET_SINGLE_ITEM_SELECTOR}`
-      );
-      const { Item: item, Ack: status, Errors: errors } = data;
+      const {
+        data: { Item: item, Ack: status, Errors: errors },
+      } = await Axios.get(buildEndpointForItem({ itemId, siteId }));
+
       if (item && status !== EBAY_FAILURE) {
-        res.statusCode = 200;
-        res.json({ item, status });
+        res.status(200).json({ item });
       } else {
-        res.statusCode = 404;
-        res.json({ error: prettyPrintErrorArray(errors), status });
+        res.status(404).json({ error: prettyPrintErrorArray(errors) });
       }
+
       break;
     default:
       res.setHeader("Allow", ["GET"]);

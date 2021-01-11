@@ -1,3 +1,3 @@
-export const defaultPageNumber = 1;
-export const defaultEntriesPerPage = 100;
-export const defaultSiteId = 0;
+export const DEFAULT_PAGE_NUMBER = 1;
+export const DEFAULT_ENTRIES_PER_PAGE = 100;
+export const DEFAULT_SITE_ID = 0;
