@@ -6,6 +6,7 @@ import { LINK_SEPARATOR } from "../../src/utils/constants/applicationConstants";
 import withSeparator from "../../src/utils/functions/withSeparator";
 import ExternalLink from "../misc/ExternalLink";
 import InternalLink from "../misc/InternalLink";
+import ebayDevMemberLogo from "../../src/assets/images/developersprogrammember_vert.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -30,6 +31,13 @@ const Footer = () => {
               LINK_SEPARATOR
             )}
           </span>
+        </p>
+        <p>
+          <img
+            src={ebayDevMemberLogo}
+            alt={t("footer.ebay-dev-alt")}
+            style={{ minWidth: "36px", height: "3rem" }}
+          />
         </p>
         <p>
           {withSeparator(

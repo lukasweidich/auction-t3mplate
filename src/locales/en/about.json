@@ -1,5 +1,5 @@
 {
-  "title": "$t(about): What drives us",
+  "title": "$t(header.about): What drives us",
   "desc": "$t(about:title)",
   "heading": "About Auction Template",
   "motivation": {
