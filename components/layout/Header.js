@@ -40,22 +40,22 @@ const Header = () => {
   const internalLinks = [
     <InternalLink href="/">
       <a>
-        <HomeOutlined /> Home
+        <HomeOutlined /> {t("header.home")}
       </a>
     </InternalLink>,
     <InternalLink href="/editor">
       <a>
-        <FormOutlined /> Editor
+        <FormOutlined /> {t("header.editor")}
       </a>
     </InternalLink>,
     <InternalLink href="/faq">
       <a>
-        <QuestionCircleOutlined /> FAQ
+        <QuestionCircleOutlined /> {t("header.faq")}
       </a>
     </InternalLink>,
     <InternalLink href="/about">
       <a>
-        <InfoCircleOutlined /> {t("about")}
+        <InfoCircleOutlined /> {t("header.about")}
       </a>
     </InternalLink>,
   ];
@@ -107,7 +107,7 @@ const Header = () => {
         placement="bottomLeft"
       >
         <a>
-          <MenuOutlined /> {t("menu")}
+          <MenuOutlined /> {t("header.menu")}
         </a>
       </Dropdown>
     );
@@ -127,7 +127,7 @@ const Header = () => {
         <Divider />
         <h2>
           <InternalLink href="/">
-            <a>Auction Template</a>
+            <a>{t("app-name")}</a>
           </InternalLink>
         </h2>
         <h3

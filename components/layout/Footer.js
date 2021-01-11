@@ -18,13 +18,13 @@ const Footer = () => {
             {withSeparator(
               [
                 <InternalLink href="/imprint">
-                  <a>{t("imprint")}</a>
+                  <a>{t("footer.imprint")}</a>
                 </InternalLink>,
                 <InternalLink href="/privacy">
-                  <a>{t("privacy")}</a>
+                  <a>{t("footer.privacy")}</a>
                 </InternalLink>,
                 <InternalLink href="/terms">
-                  <a>{t("terms")}</a>
+                  <a>{t("footer.terms")}</a>
                 </InternalLink>,
               ],
               LINK_SEPARATOR
@@ -39,7 +39,7 @@ const Footer = () => {
                 <ExternalLink href="https://quikk.de">QUIKK</ExternalLink>
               </>,
               <ExternalLink href="https://quikk.de/kontakt">
-                {t("contact")}
+                {t("footer.contact")}
               </ExternalLink>,
             ],
             LINK_SEPARATOR

@@ -1,5 +1,6 @@
 import { Modal } from "antd";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { COOKIE_CONSENT_NAME } from "../../src/utils/constants/applicationConstants";
 import {
   saveCookie,
@@ -8,9 +9,11 @@ import {
 } from "../../src/utils/functions/cookieUtils";
 import InternalLink from "./InternalLink";
 
-const CookieConsentModal = () => {
+const CookieConsentModal = ({ open = false }) => {
+  const { t } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(
-    !isCookieAvailable({ key: COOKIE_CONSENT_NAME })
+    !isCookieAvailable({ key: COOKIE_CONSENT_NAME }) || open
   );
 
   const closeModal = () => {
@@ -30,19 +33,16 @@ const CookieConsentModal = () => {
     <Modal
       visible={isOpen}
       closable={false}
-      okText={"OKAY"}
+      okText={t("cookies.okText")}
       onOk={handleOk}
-      cancelText={"CANCEL"}
+      cancelText={t("cookies.cancelText")}
       onCancel={handleCancel}
       maskClosable={false}
-      title="Cookies"
+      title={t("cookies.title")}
     >
-      Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern
-      zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite
-      stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu
-      Cookies erhalten Sie in unserer{" "}
+      {t("cookies.body")}{" "}
       <InternalLink href="/privacy">
-        <a>Datenschutzerklärung</a>
+        <a>{t("cookies.privacy")}</a>
       </InternalLink>
       .
     </Modal>

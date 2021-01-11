@@ -1,10 +1,27 @@
 {
-  "imprint": "Imprint",
-  "privacy": "Privacy",
-  "about": "About",
-  "contact": "Contact",
-  "terms": "Terms",
-  "menu": "Menu",
-  "language": "EN",
+  "header": {
+    "menu": "Menu",
+    "home": "Home",
+    "editor": "Editor",
+    "faq": "FAQ",
+    "about": "About"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  },
+  "cookies": {
+    "title": "We use cookies.",
+    "body": "In order to optimize our website for you and to improve it continuously, we use cookies. By continuing to use the website, you are consenting to the use of cookies. You can find more information about cookies in our",
+    "privacy": "privacy statement",
+    "okText": "Allow cookies",
+    "cancelText": "Reject cookies"
+  },
+  "actions": {
+    "load": "Load",
+    "save": "Save"
+  },
   "app-name": "Auction Template"
 }
