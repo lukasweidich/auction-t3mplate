@@ -16,4 +16,4 @@ Feel free to use the api we provide at `/api/items/<itemId>` to retrieve item da
 
 Both API endpoints take `siteId` an as optional query parameter to specify the eBay country. Please include the siteId whenever possible to prevent any unwanted side effects. If not provided, `siteId` defaults to `0`. Refer to the [official eBay documentation](https://developer.ebay.com/DevZone/merchandising/docs/Concepts/SiteIDToGlobalID.html) for more information.
 
-> Examples: `/api/items/123456789?siteId=77` and `/api/sellers/dem-it?siteId=77`
+> Examples: `/api/items/123456789?siteId=77` and `/api/sellers/dem-it?siteId=77`.
