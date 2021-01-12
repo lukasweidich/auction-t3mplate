@@ -1,4 +1,4 @@
-import { Menu, Dropdown, Divider, Space } from "antd";
+import { Affix, Menu, Dropdown, Divider, Space, Button } from "antd";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import InternalLink from "../misc/InternalLink";
@@ -17,6 +17,11 @@ import {
 import { Visible, Hidden } from "react-grid-system";
 
 const Header = () => {
+  const headerStyling = {
+    zIndex: "var(--header-z-index)",
+    backgroundColor: "var(--background-color)",
+  };
+
   const dispatch = useDispatch();
   const { i18n, t } = useTranslation();
 
@@ -63,16 +68,27 @@ const Header = () => {
   const FlagSelectorMenu = (
     <Menu>
       <Menu.Item>
-        <a onClick={() => handleLanguageSet("de")}>
+        <a
+          onClick={() => handleLanguageSet("de")}
+          style={{ textAlign: "center" }}
+        >
           <span
-            className={`flag-icon flag-icon-${getFlagIconIdFromLanguage("de")}`}
+            className={`flag-icon flag-icon-${getFlagIconIdFromLanguage(
+              "de"
+            )} language-select`}
           />
         </a>
       </Menu.Item>
+      <Divider />
       <Menu.Item>
-        <a onClick={() => handleLanguageSet("en")}>
+        <a
+          onClick={() => handleLanguageSet("en")}
+          style={{ textAlign: "center" }}
+        >
           <span
-            className={`flag-icon flag-icon-${getFlagIconIdFromLanguage("en")}`}
+            className={`flag-icon flag-icon-${getFlagIconIdFromLanguage(
+              "en"
+            )} language-select`}
           />
         </a>
       </Menu.Item>
@@ -85,16 +101,31 @@ const Header = () => {
       trigger={["click"]}
       placement="bottomRight"
     >
-      <a>
-        <span className={`flag-icon flag-icon-${flagId}`}></span>
-      </a>
+      <Button>
+        <span className={`flag-icon flag-icon-${flagId}`} />
+      </Button>
     </Dropdown>
   );
 
   const MobileNavigationMenu = (
-    <Menu>
+    <Menu mode="inline">
       {internalLinks.map((link, i) => {
-        return <Menu.Item key={i}>{link}</Menu.Item>;
+        return (
+          <>
+            {i > 0 && <Divider />}
+            <Menu.Item key={i}>
+              <h3
+                style={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                  margin: "1rem",
+                }}
+              >
+                {link}
+              </h3>
+            </Menu.Item>
+          </>
+        );
       })}
     </Menu>
   );
@@ -104,11 +135,11 @@ const Header = () => {
       <Dropdown
         overlay={MobileNavigationMenu}
         trigger={["click"]}
-        placement="bottomLeft"
+        overlayClassName="container"
       >
-        <a>
-          <MenuOutlined /> {t("header.menu")}
-        </a>
+        <Button>
+          <MenuOutlined />
+        </Button>
       </Dropdown>
     );
   };
@@ -116,41 +147,41 @@ const Header = () => {
   return (
     <header
       style={{
-        position: "fixed",
         height: "var(--header-height)",
         width: "100%",
-        zIndex: "var(--header-z-index)",
-        background: "#fff",
+        ...headerStyling,
       }}
     >
       <Container>
-        <Divider />
-        <h2>
+        <h2 style={{ margin: "var(--divider-margin) 0 0 0" }}>
           <InternalLink href="/">
             <a>{t("app-name")}</a>
           </InternalLink>
         </h2>
-        <h3
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Visible xs>
-            <MobileNavigationDropdown />
-          </Visible>
-          <Hidden xs>
-            <Space size="large">
-              {internalLinks.map((link, i) =>
-                React.cloneElement(link, { key: i })
-              )}
-            </Space>
-          </Hidden>
-          <FlagSelectorDropdown />
-        </h3>
-        <Divider />
+        <Affix style={{ ...headerStyling }}>
+          <h3
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              paddingTop: "var(--divider-margin)",
+            }}
+          >
+            <Visible xs>
+              <MobileNavigationDropdown />
+            </Visible>
+            <Hidden xs>
+              <Space size="large">
+                {internalLinks.map((link, i) =>
+                  React.cloneElement(link, { key: i })
+                )}
+              </Space>
+            </Hidden>
+            <FlagSelectorDropdown />
+          </h3>
+          <Divider />
+        </Affix>
       </Container>
     </header>
   );

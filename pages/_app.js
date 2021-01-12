@@ -6,7 +6,6 @@ import "../i18n";
 import "../styles/globals.css";
 import "../node_modules/antd/dist/antd.css";
 import "../node_modules/flag-icon-css/css/flag-icon.min.css";
-import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
 
 import { Container } from "react-bootstrap";

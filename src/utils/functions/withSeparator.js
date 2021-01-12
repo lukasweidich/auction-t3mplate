@@ -1,4 +1,4 @@
 const withSeparator = (inputArray, separator) =>
-  inputArray.reduce((prev, curr) => [prev, <span>{separator}</span>, curr]);
+  inputArray.reduce((prev, curr) => [prev, separator, curr]);
 
 export default withSeparator;

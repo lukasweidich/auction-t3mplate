@@ -1,13 +1,16 @@
 :root {
-  --header-height: 142.5px;
+  --header-height: 118px;
   --header-z-index: 100;
   --divider-margin: 24px;
+  --background-color: #fff;
 }
 
 html,
-body {
+body,
+main {
   padding: 0;
   margin: 0;
+  background-color: var(--background-color);
 }
 
 a {
@@ -25,5 +28,22 @@ a {
 }
 #__next > main {
   flex: 1 1 auto;
-  margin-top: calc(var(--header-height) + var(--divider-margin));
+  margin-top: calc(2 * var(--divider-margin) - 4px);
+}
+
+.ant-dropdown-menu span[role="img"] {
+  margin-right: 1rem !important;
+}
+
+.ant-dropdown-menu .ant-divider {
+  margin: 0;
+}
+
+header .ant-affix {
+  z-index: var(--header-z-index);
+  background-color: var(--background-color);
+}
+
+.ant-dropdown.container {
+  left: 0 !important;
 }
