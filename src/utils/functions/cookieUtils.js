@@ -25,7 +25,6 @@ export const deleteAllCookies = () => {
   const allCookies = Cookies.get();
   const allCookieKeys = Array.from(Object.keys(allCookies));
   allCookieKeys.forEach((cookieKey) => {
-    console.log(cookieKey);
     deleteCookie({ key: cookieKey });
   });
 };

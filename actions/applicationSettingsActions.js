@@ -1,8 +1,7 @@
-import { SET_LANGUAGE, SET_LISTING_ID_KNOWN, SET_SITE_ID } from "./types";
+import { SET_LANGUAGE, SET_SITE_ID } from "./types";
 import { saveCookie } from "../src/utils/functions/cookieUtils";
 import { getFlagIconIdFromLanguage } from "../src/utils/functions/languageUtils";
 import {
-  IS_LISTING_ID_KNOWN_COOKIE_NAME,
   LANGUAGE_COOKIE_NAME,
   SITE_ID_COOKIE_NAME,
 } from "../src/utils/constants/applicationConstants";
