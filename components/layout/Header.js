@@ -1,4 +1,12 @@
-import { Affix, Menu, Dropdown, Divider, Space, Button } from "antd";
+import {
+  Affix,
+  Menu,
+  Dropdown,
+  Divider,
+  Space,
+  Button,
+  Typography,
+} from "antd";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import InternalLink from "../misc/InternalLink";
@@ -154,11 +162,14 @@ const Header = () => {
       }}
     >
       <Container>
-        <h2 style={{ margin: "var(--divider-margin) 0 0 0" }}>
+        <Typography.Title
+          level={2}
+          style={{ margin: "var(--divider-margin) 0 0 0" }}
+        >
           <InternalLink href="/">
             <a>{t("app-name")}</a>
           </InternalLink>
-        </h2>
+        </Typography.Title>
         <Affix style={{ ...headerStyling }}>
           <h3
             style={{

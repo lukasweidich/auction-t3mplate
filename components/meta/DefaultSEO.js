@@ -17,6 +17,8 @@ const DefaultSEO = () => {
     "ad",
     "template",
     "description",
+    "description template",
+    "description editor",
     "online",
     "web,editor",
     "online-editor",
@@ -28,7 +30,6 @@ const DefaultSEO = () => {
     "ebay-shop",
     "shop-design",
     "ebay design",
-    "ebay-template",
     "https",
     "ssl",
     "responsive",
@@ -52,6 +53,8 @@ const DefaultSEO = () => {
     "ebay-template",
     "template",
     "artikelbeschreibung",
+    "verkaufsvorlagen",
+    "verkaufs vorlage",
   ];
   const googleSiteVerification = "";
   const url = "https://auction-template.de";
@@ -60,6 +63,11 @@ const DefaultSEO = () => {
 
   return (
     <Head>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
       <meta charSet="utf-8" />
       <meta property="content-type" content="text/html; charset=UTF-8" />
       <meta name="keywords" content={keywords.join(",")} />

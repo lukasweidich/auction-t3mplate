@@ -6,11 +6,9 @@
 }
 
 html,
-body,
-main {
+body {
   padding: 0;
   margin: 0;
-  background-color: var(--background-color);
 }
 
 a {
@@ -19,6 +17,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Mukta", sans-serif !important;
 }
 
 #__next {
@@ -42,4 +41,8 @@ a {
 header .ant-affix {
   z-index: var(--header-z-index);
   background-color: var(--background-color);
+}
+
+ul {
+  list-style: none;
 }
