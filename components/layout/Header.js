@@ -113,16 +113,15 @@ const Header = () => {
         return (
           <>
             {i > 0 && <Divider />}
-            <Menu.Item key={i}>
-              <h3
-                style={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  margin: "1rem",
-                }}
-              >
-                {link}
-              </h3>
+            <Menu.Item
+              key={i}
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "1rem",
+              }}
+            >
+              {link}
             </Menu.Item>
           </>
         );
@@ -132,15 +131,17 @@ const Header = () => {
 
   const MobileNavigationDropdown = () => {
     return (
-      <Dropdown
-        overlay={MobileNavigationMenu}
-        trigger={["click"]}
-        overlayClassName="container"
-      >
-        <Button>
-          <MenuOutlined />
-        </Button>
-      </Dropdown>
+      <Affix>
+        <Dropdown
+          overlay={MobileNavigationMenu}
+          trigger={["click"]}
+          overlayClassName="container"
+        >
+          <Button>
+            <MenuOutlined />
+          </Button>
+        </Dropdown>
+      </Affix>
     );
   };
 

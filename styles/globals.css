@@ -31,19 +31,15 @@ a {
   margin-top: calc(2 * var(--divider-margin) - 4px);
 }
 
-.ant-dropdown-menu span[role="img"] {
-  margin-right: 1rem !important;
-}
-
 .ant-dropdown-menu .ant-divider {
   margin: 0;
+}
+
+.ant-dropdown.container {
+  left: 0 !important;
 }
 
 header .ant-affix {
   z-index: var(--header-z-index);
   background-color: var(--background-color);
-}
-
-.ant-dropdown.container {
-  left: 0 !important;
 }
