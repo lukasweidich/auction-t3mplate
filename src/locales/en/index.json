@@ -1,11 +1,10 @@
 {
   "title": "Auction Template - Generate free eBay descriptions on the fly",
   "desc": "Free and easy to use tool for your eBay listings. The best editor to load your ads, and to create and download responsive descriptions with custom themes.",
-  "heading": "eBay auction templates",
-  "subheading": "Free to use. No Registration. Automatically generated within seconds.",
-  "paragraph": {
-    "heading": "Heading",
-    "part1": "this is my first part",
-    "part2": "the second part is right here"
+  "hero": {
+    "heading": "eBay item descriptions with Auction Template",
+    "subheading": "Free to use. No Registration. Lightning fast.",
+    "paragraph": "Use Auction Template to generate your own custom eBay product description within seconds. Secure, free to use and without registration - forever.",
+    "cta": "Create Auction Template"
   }
 }

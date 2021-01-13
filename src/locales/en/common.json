@@ -11,7 +11,9 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact",
-    "ebay-dev-alt": "Auction Template participates in eBay's developer program."
+    "ebay-dev-alt": "Auction Template participates in eBay's developer program.",
+    "short-desc": "Auction Template bietet Ihnen eine exklusiv mit HTML und CSS entwickelte Auktionsvorlage für die Produktbeschreibungen Ihrer eBay Inserate. Wir haben alle wichtigen eBay Richtlinien berücksichtigt (Responsive, HTTPS/SSL, keine aktiven Inhalte mit JavaScript, etc.), damit Sie mit dem Open-Source-Projekt Auction Template eine ganzheitliche und zufriedenstellende Lösung erhalten. Unsere eBay Verkaufsvorlagen sind professionell entwickelt und auf ein konsistentes und seriöses Erscheinungsbild für Ihren eBay Shop ausgerichtet. Im Gegensatz zu anderen Anbietern nimmt Auction Template am eBay Developers Program teil und hat so Zugriff auf offizielle und gesicherte Schnittstellen von eBay. Durch diese APIs erhalten wir die Informationen und Bilder Ihrer Artikel, die Sie ansonsten in mühseliger Doppelpflege hätten eintragen müssen. Die automatisch generierte Auktionsvorlage von Auction Template kann mit unserem innovativen Editor ganz bequem bearbeitet und der erzeugte HTML-Code direkt in die Produktbeschreibungen Ihrer eBay Inserate eingefügt werden.",
+    "disclaimer": "Auction Template is not owned or operated by eBay Inc. eBay and the eBay logo are trademarks of eBay Inc."
   },
   "cookies": {
     "title": "We use cookies.",

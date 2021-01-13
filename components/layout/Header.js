@@ -161,7 +161,7 @@ const Header = () => {
         ...headerStyling,
       }}
     >
-      <Container>
+      <Container style={{ ...headerStyling }}>
         <Typography.Title
           level={2}
           style={{ margin: "var(--divider-margin) 0 0 0" }}
@@ -171,7 +171,7 @@ const Header = () => {
           </InternalLink>
         </Typography.Title>
         <Affix style={{ ...headerStyling }}>
-          <h3
+          <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -185,13 +185,15 @@ const Header = () => {
             </Visible>
             <Hidden xs>
               <Space size="large">
-                {internalLinks.map((link, i) =>
-                  React.cloneElement(link, { key: i })
-                )}
+                {internalLinks.map((link, i) => (
+                  <h3 key={i} style={{ margin: 0 }}>
+                    {link}
+                  </h3>
+                ))}
               </Space>
             </Hidden>
             <FlagSelectorDropdown />
-          </h3>
+          </div>
           <Divider />
         </Affix>
       </Container>

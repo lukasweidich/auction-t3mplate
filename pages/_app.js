@@ -20,7 +20,7 @@ const MyApp = ({ Component, pageProps, locale }) => {
       <AutoSelectLanguageFromCookies {...{ locale }} />
       <DefaultSEO />
       <Header />
-      <main>
+      <main style={{ overflow: "hidden" }}>
         <Container>
           <Component {...pageProps} />
         </Container>

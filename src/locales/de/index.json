@@ -1,11 +1,10 @@
 {
   "title": "Auction Template - eBay Auktionsvorlagen kostenlos generieren",
   "desc": "Kostenlos, ohne Anmeldung und einfach zu nutzen: Auction Template ist der beste Editor, um automatisiert Auktionsvorlagen für bestehende Inserate zu erstellen.",
-  "heading": "eBay Auktionsvorlagen",
-  "subheading": "Kostenlos. Ohne Anmeldung. Automatisiert erstellt in Sekundenschnelle.",
-  "paragraph": {
-    "heading": "Überschrift",
-    "part1": "das ist mein erster part",
-    "part2": "der zweite part steht hier"
+  "hero": {
+    "heading": "eBay Auktionsvorlagen mit Auction Template",
+    "subheading": "Kostenlos. Ohne Anmeldung. In Sekundenschnelle.",
+    "paragraph": "Mit Auction Template generieren Sie Ihre persönliche eBay Produktbeschreibung in Sekundenschnelle. Sicher, kostenlos und ohne Anmeldung - für immer.",
+    "cta": "Auktionsvorlage erstellen"
   }
 }

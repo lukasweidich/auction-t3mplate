@@ -4,7 +4,7 @@ import {
   LayoutOutlined,
   LockOutlined,
   SafetyOutlined,
-  UploadOutlined,
+  DownloadOutlined,
 } from "@ant-design/icons";
 import { Divider, Row, Typography } from "antd";
 import React from "react";
@@ -21,7 +21,7 @@ const Features = () => {
           title="Automatisiert"
           description="Auction Template ist mit eBay verbunden und kann Ihr Inserat direkt einladen - keine Doppelpflege notwendig."
         >
-          <UploadOutlined style={{ fontSize: "24px" }} />
+          <DownloadOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
           title="Kostenlos"

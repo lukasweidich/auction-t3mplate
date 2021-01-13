@@ -1,28 +1,24 @@
-import { Button, Col, Row, Typography } from "antd";
+import { Button, Typography } from "antd";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import InternalLink from "../misc/InternalLink";
 
+import { Row, Col } from "react-grid-system";
+
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
-    <Row
-      gutter={[32, 32]}
-      justify="space-between"
-      align="middle"
-      style={{ height: "60vh" }}
-    >
-      <Col md={24} lg={12}>
-        <Typography.Title level={1}>eBay Auktionsvorlagen</Typography.Title>
+    <Row style={{ minHeight: "60vh", alignItems: "center" }}>
+      <Col md={12} lg={6}>
+        <Typography.Title level={1}>{t("index:hero.heading")}</Typography.Title>
         <Typography.Title level={4}>
-          Kostenlos. Ohne Anmeldung. In Sekundenschnelle.
+          {t("index:hero.subheading")}
         </Typography.Title>
-        <Typography.Paragraph>
-          Mit Auction Template generieren Sie automatisiert Ihre eBay
-          persönliche Auktionsvorlage in Sekundenschnelle. Sicher, kostenlos und
-          ohne Anmeldung - für immer.
-        </Typography.Paragraph>
+        <Typography.Paragraph>{t("index:hero.paragraph")}</Typography.Paragraph>
         <Button type="primary">
           <InternalLink href="/editor">
-            <a>Auktionsvorlage generieren</a>
+            <a>{t("index:hero.cta")}</a>
           </InternalLink>
         </Button>
       </Col>
