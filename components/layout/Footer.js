@@ -15,11 +15,12 @@ const Footer = () => {
     <footer>
       <Container>
         <Divider />
-        <p style={{ fontSize: "12px" }}>{t("footer.short-desc")}</p>
         <p style={{ fontSize: "12px" }}>
-          <ExternalLink href="https://www.ebay.com/help/policies/listing-policies/listing-policies?id=4213">
-            eBay Grundsätze für das Einstellen von Artikeln{" "}
-            {new Date().getFullYear()}
+          {t("footer.short-desc", { year: new Date().getFullYear() })}
+        </p>
+        <p style={{ fontSize: "12px" }}>
+          <ExternalLink href={t("footer.policies.url")}>
+            {t("footer.policies.text", { year: new Date().getFullYear() })}
           </ExternalLink>
         </p>
         <p>

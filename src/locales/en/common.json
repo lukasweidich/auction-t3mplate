@@ -11,9 +11,13 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact",
-    "ebay-dev-alt": "Auction Template participates in eBay's developer program.",
-    "short-desc": "Auction Template bietet Ihnen eine exklusiv mit HTML und CSS entwickelte Auktionsvorlage für die Produktbeschreibungen Ihrer eBay Inserate. Wir haben alle wichtigen eBay Richtlinien berücksichtigt (Responsive, HTTPS/SSL, keine aktiven Inhalte mit JavaScript, etc.), damit Sie mit dem Open-Source-Projekt Auction Template eine ganzheitliche und zufriedenstellende Lösung erhalten. Unsere eBay Verkaufsvorlagen sind professionell entwickelt und auf ein konsistentes und seriöses Erscheinungsbild für Ihren eBay Shop ausgerichtet. Im Gegensatz zu anderen Anbietern nimmt Auction Template am eBay Developers Program teil und hat so Zugriff auf offizielle und gesicherte Schnittstellen von eBay. Durch diese APIs erhalten wir die Informationen und Bilder Ihrer Artikel, die Sie ansonsten in mühseliger Doppelpflege hätten eintragen müssen. Die automatisch generierte Auktionsvorlage von Auction Template kann mit unserem innovativen Editor ganz bequem bearbeitet und der erzeugte HTML-Code direkt in die Produktbeschreibungen Ihrer eBay Inserate eingefügt werden.",
-    "disclaimer": "Auction Template is not owned or operated by eBay Inc. eBay and the eBay logo are trademarks of eBay Inc."
+    "ebay-dev-alt": "Auction Template takes part in eBays developers program.",
+    "short-desc": "Auction Template offers you eBay product description templates exclusively developed with HTML and CSS for your eBay listings. We have taken into account all the important eBay guidelines {{year}} (Responsive, HTTPS/SSL, no active content with JavaScript, etc.) so that you get a holistic and satisfying solution with the Auction Template open source project. Our eBay ad templates are professionally developed and focused on a consistent and reputable appearance for your eBay store. Unlike other providers, Auction Template participates in eBays developers program and thus has access to official and secured data sources from eBay. Through these APIs we receive the information and images of your items that you would otherwise have had to enter in tedious double maintenance. The automatically generated auction template from Auction Template can be easily edited with our innovative editor and the generated HTML code can be directly inserted into the product descriptions of your eBay listings.",
+    "disclaimer": "Auction Template is not owned or operated by eBay Inc. eBay and the eBay logo are registered trademarks of eBay Inc.",
+    "policies": {
+      "text": "eBay listing policies {{year}}",
+      "url": "https://www.ebay.com/help/policies/listing-policies/listing-policies?id=4213"
+    }
   },
   "cookies": {
     "title": "We use cookies.",

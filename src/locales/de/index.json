@@ -6,5 +6,59 @@
     "subheading": "Kostenlos. Ohne Anmeldung. In Sekundenschnelle.",
     "paragraph": "Mit Auction Template generieren Sie Ihre persönliche eBay Produktbeschreibung in Sekundenschnelle. Sicher, kostenlos und ohne Anmeldung - für immer.",
     "cta": "Auktionsvorlage erstellen"
+  },
+  "features": {
+    "heading": "Ihre Vorteile",
+    "1": {
+      "title": "Automatisiert",
+      "description": "Auction Template ist mit eBay verbunden und kann Ihr Inserat direkt einladen - keine Doppelpflege notwendig."
+    },
+    "2": {
+      "title": "Kostenlos",
+      "description": "Auction Template ist ein Open-Source-Projekt und wird immer in einer kostenlosen Version verfügbar sein."
+    },
+    "3": {
+      "title": "Sicher",
+      "description": "Auction Template ist webbasiert und erfordert weder einen Download noch Ihre eBay Zugangsdaten."
+    },
+    "4": {
+      "title": "Innovativer Editor",
+      "description": "Auction Template kann problemlos ohne Vorkenntnisse bedient werden, um Auktionsvorlagen zu konfigurieren."
+    },
+    "5": {
+      "title": "Modernes Design",
+      "description": "Auction Template vereint stylische Auktionsvorlagen mit responsive Optimierung für mobile Endgeräte."
+    },
+    "6": {
+      "title": "eBay Konform {{year}}",
+      "description": "Auction Template ist Teil des eBay Developers Program und unsere Templates sind eBay Richtlinien konform."
+    }
+  },
+  "steps": {
+    "heading": "5 Schritte",
+    "1": {
+      "title": "Artikel einladen",
+      "description": "Finden Sie Ihren Artikel durch die eBay Artikelnummer oder wählen Sie ihn direkt aus Ihrem Shop aus. Auction Template kümmert sich um den Rest und lädt alle Informationen ein."
+    },
+    "2": {
+      "title": "Optional: Inhalte bearbeiten",
+      "description": "Möchten Sie Inhalte hinzufügen, löschen oder bearbeiten? Kein Problem! Sollten Sie etwas an Ihrem Produkt verändern wollen, können sie dies natürlich in unserem Editor tun."
+    },
+    "3": {
+      "title": "Auktionsvorlage anpassen",
+      "description": "Ihrer Kreativität sind keine Grenzen gesetzt. Passen Sie die aussagekräftige Auktionsvorlage nach Ihren Vorlieben an und steigern Sie den Wiedererkennungswert Ihres eBay Shops."
+    },
+    "4": {
+      "title": "Produktbeschreibung kopieren",
+      "description": "Fast geschafft! Nun müssen Sie den vorliegenden HTML Code kopieren und der Produktbeschreibung Ihres eBay Inserats hinzufügen. Fragen dazu beantworten wir in unserem FAQ."
+    },
+    "5": {
+      "title": "Zurücklehnen",
+      "description": "Im Kaufprozess des Online-Shoppings sind aussagekräftige Produktbeschreibungen und ansprechende Produktbilder elementar für eine Kaufentscheidung potentieller Kunden. ¹"
+    },
+    "source": {
+      "name": "Online-Shopping: Analyse zu Trends und Potenzialen im E-Commerce",
+      "page": "Seite"
+    }
   }
 }

@@ -138,7 +138,6 @@ const Header = () => {
         closable={false}
         onClose={() => setIsDrawerOpen(false)}
         visible={isDrawerOpen}
-        title={t("app-name")}
       >
         <Space direction="vertical">
           {internalLinks.map((link, i) => (

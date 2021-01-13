@@ -1,6 +1,7 @@
 import { Collapse } from "antd";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import TitleDivider from "../components/misc/TitleDivider";
 
 const { Panel } = Collapse;
 
@@ -8,7 +9,7 @@ const FAQScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <h1>{t("faq:heading")}</h1>
+      <TitleDivider level={1} title={t("header.faq")} />
       <p>{t("faq:subheading")}</p>
       <Collapse accordion>
         {[...Array(14)]

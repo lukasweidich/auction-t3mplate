@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Steps, Typography } from "antd";
+import { Steps } from "antd";
 
 import { Row, Col } from "react-grid-system";
 
@@ -11,50 +11,50 @@ import {
   OrderedListOutlined,
 } from "@ant-design/icons";
 import ExternalLink from "../misc/ExternalLink";
+import TitleDivider from "../misc/TitleDivider";
 
 const { Step } = Steps;
-
+import { useTranslation } from "react-i18next";
 const ATSteps = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <Divider orientation="left">
-        <Typography.Title level={2}>5 Schritte</Typography.Title>
-      </Divider>
+      <TitleDivider title={t("index:steps.heading")} />
       <Row>
         <Col md={12} lg={6}>
           <Steps direction="vertical" current={99}>
             <Step
-              title="Artikel einladen"
-              description="Finden Sie Ihren Artikel durch die eBay Artikelnummer oder wählen Sie ihn direkt aus Ihrem Shop aus. Auction Template kümmert sich um den Rest und lädt alle Informationen ein."
+              title={t("index:steps.1.title")}
+              description={t("index:steps.1.description")}
               icon={<TagOutlined />}
             />
             <Step
-              title="Optional: Inhalte bearbeiten"
-              description="Möchten Sie Inhalte hinzufügen, löschen oder bearbeiten? Kein Problem! Sollten Sie etwas an Ihrem Produkt verändern wollen, können sie dies natürlich in unserem Editor tun."
+              title={t("index:steps.2.title")}
+              description={t("index:steps.2.description")}
               icon={<OrderedListOutlined />}
             />
             <Step
-              title="Auktionsvorlage anpassen"
-              description="Ihrer Kreativität sind keine Grenzen gesetzt. Passen Sie die aussagekräftige Auktionsvorlage nach Ihren Vorlieben an und steigern Sie den Wiedererkennungswert Ihres eBay Shops."
+              title={t("index:steps.3.title")}
+              description={t("index:steps.3.description")}
               icon={<HighlightOutlined />}
             />
             <Step
-              title="Produktbeschreibung kopieren"
-              description="Fast geschafft! Nun müssen Sie den vorliegenden HTML Code kopieren und der Produktbeschreibung Ihres eBay Inserats hinzufügen. Fragen dazu beantworten wir in unserem FAQ."
+              title={t("index:steps.4.title")}
+              description={t("index:steps.4.description")}
               icon={<CopyOutlined />}
             />
             <Step
-              title="Zurücklehnen"
-              description="Im Kaufprozess des Online-Shoppings sind aussagekräftige Produktbeschreibungen und ansprechende Produktbilder elementar für eine Kaufentscheidung potentieller Kunden. ¹"
+              title={t("index:steps.5.title")}
+              description={t("index:steps.5.description")}
               icon={<TrophyOutlined />}
             />
           </Steps>
           <p style={{ fontSize: "12px" }}>
             ¹ KPMG, 2020.{" "}
             <ExternalLink href="https://hub.kpmg.de/studie-online-shopping">
-              Online-Shopping: Analyse zu Trends und Potenzialen im E-Commerce
+              {t("index:steps.source.name")}
             </ExternalLink>
-            , S. 8.
+            , {t("index:steps.source.page")} 8.
           </p>
         </Col>
       </Row>

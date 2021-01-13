@@ -1,11 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import TitleDivider from "../components/misc/TitleDivider";
 
 const ImprintScreen = () => {
+  const { t } = useTranslation();
   return (
     <>
-      {[...Array(100)].map((x, d) => (
-        <p key={d}>Imprint</p>
-      ))}
+      <TitleDivider level={1} title={t("footer.imprint")} />
     </>
   );
 };

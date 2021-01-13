@@ -4,14 +4,11 @@
   "heading": "Über Auction Template",
   "motivation": {
     "title": "Unsere Motivation",
-    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-  },
-  "numbers": {
-    "title": "Auction Template in Zahlen",
-    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    "body": "In unserem Freundes- und Bekanntenkreis verstärkte sich zu Beginn von 2020 die Nachfrage nach einer kostenlosen Lösung, attraktive eBay Auktionsvorlagen ohne manuellen Aufwand zu erstellen. Also beschlossen Joyce und ich uns dazu, das Vorhaben neben unserem Informatik Bachelorstudium selbst in die Hand zu nehmen und das Projekt in die Tat umzusetzen. Mittlerweile hat sich Auction Template in der dritten Iteration zu einem Herzensprojekt von uns beiden entwickelt. Das Ziel ist und bleibt die kostenlose und automatisierte Bereitstellung von modernen Auktionsvorlagen zu Ihren eBay Inseraten. Wir hoffen, die Attraktivität Ihrer Inserate durch ein konsistentes und professionelles Erscheinungsbild erhöhen zu können und arbeiten bereits an weiteren Features."
   },
   "contact": {
     "title": "Kontakt",
-    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-  }
+    "body": "Wir stehen Ihnen gerne für Fragen, Feature Requests oder Kooperationen zur Verfügung. Den Link zum Kontaktformular finden Sie etwas weiter unten auf dieser Seite."
+  },
+  "thanks": "Vielen Dank, dass Sie Auction Template nutzen!"
 }

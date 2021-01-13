@@ -6,5 +6,59 @@
     "subheading": "Free to use. No Registration. Lightning fast.",
     "paragraph": "Use Auction Template to generate your own custom eBay product description within seconds. Secure, free to use and without registration - forever.",
     "cta": "Create Auction Template"
+  },
+  "features": {
+    "heading": "Features",
+    "1": {
+      "title": "Automated",
+      "description": "Auction Template is connected to eBay and can load your listing directly - no need for double maintenance."
+    },
+    "2": {
+      "title": "Free to use",
+      "description": "Auction Template is an open source project and thus will always be available in a free version."
+    },
+    "3": {
+      "title": "Secure",
+      "description": "Auction Template is web-based and does not require a download or your eBay credentials."
+    },
+    "4": {
+      "title": "Innovative editor",
+      "description": "Auction Template can be easily operated without any previous knowledge configuring auction templates."
+    },
+    "5": {
+      "title": "Modern design",
+      "description": "Auction Template combines stylish auction templates with responsive optimization for mobile devices."
+    },
+    "6": {
+      "title": "eBay compliant {{year}}",
+      "description": "Auction Template is part of the eBay developers program and our templates are eBay policy compliant."
+    }
+  },
+  "steps": {
+    "heading": "5 Steps",
+    "1": {
+      "title": "Load article",
+      "description": "Find your item by the unique eBay item number or select it directly from your store. Auction Template takes care of the rest and loads all the information."
+    },
+    "2": {
+      "title": "Optional: Edit content",
+      "description": "Do you want to add, delete or edit content? No problem! If you want to change something regarding your product, you can of course do it in our editor."
+    },
+    "3": {
+      "title": "Customize auction template",
+      "description": "There are no limits to your creativity. Customize the expressive auction template according to your preferences and increase the recognition value of your eBay store."
+    },
+    "4": {
+      "title": "Copy product description",
+      "description": "Almost there! Now you need to copy this HTML code and add it to the product description of your eBay listing. We answer questions about this in our FAQ."
+    },
+    "5": {
+      "title": "Relax",
+      "description": "In the buying process of online shopping, meaningful product descriptions and appealing product images are elementary for a purchase decision. ¹"
+    },
+    "source": {
+      "name": "Online shopping: Analysis of trends and potential in e-commerce",
+      "page": "Page"
+    }
   }
 }

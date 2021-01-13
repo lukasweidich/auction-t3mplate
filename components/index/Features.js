@@ -6,50 +6,54 @@ import {
   SafetyOutlined,
   DownloadOutlined,
 } from "@ant-design/icons";
-import { Divider, Row, Typography } from "antd";
+import { Row } from "antd";
 import React from "react";
 import FeatureCard from "./FeatureCard";
+import TitleDivider from "../misc/TitleDivider";
+import { useTranslation } from "react-i18next";
 
 const Features = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <Divider orientation="left">
-        <Typography.Title level={2}>Ihre Vorteile</Typography.Title>
-      </Divider>
+      <TitleDivider title={t("index:features.heading")} />
       <Row gutter={[32, 32]}>
         <FeatureCard
-          title="Automatisiert"
-          description="Auction Template ist mit eBay verbunden und kann Ihr Inserat direkt einladen - keine Doppelpflege notwendig."
+          title={t("index:features.1.title")}
+          description={t("index:features.1.description")}
         >
           <DownloadOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
-          title="Kostenlos"
-          description="Auction Template ist ein Open-Source-Projekt und wird daher immer in einer kostenlosen Version verfügbar sein."
+          title={t("index:features.2.title")}
+          description={t("index:features.2.description")}
         >
           <CreditCardOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
-          title="Sicher"
-          description="Auction Template ist webbasiert und benötigt für die Benutzung weder einen Download noch Ihre eBay Zugangsdaten."
+          title={t("index:features.3.title")}
+          description={t("index:features.3.description")}
         >
           <LockOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
-          title="Innovativer Editor"
-          description="Auction Template kann problemlos ohne Vorkenntnisse bedient werden, um Auktionsvorlagen zu konfigurieren."
+          title={t("index:features.4.title")}
+          description={t("index:features.4.description")}
         >
           <BgColorsOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
-          title="Modernes Design"
-          description="Auction Template vereint stylische Auktionsvorlagen mit responsive Optimierung für mobile Endgeräte."
+          title={t("index:features.5.title")}
+          description={t("index:features.5.description")}
         >
           <LayoutOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
-          title={`eBay Konform ${new Date().getFullYear()}`}
-          description="Auction Template ist Teil des eBay Developers Program und unsere Templates sind eBay Richtlinien konform."
+          title={t("index:features.6.title", {
+            year: new Date().getFullYear(),
+          })}
+          description={t("index:features.6.description")}
         >
           <SafetyOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
