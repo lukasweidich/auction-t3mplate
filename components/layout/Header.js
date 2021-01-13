@@ -6,6 +6,7 @@ import {
   Space,
   Button,
   Typography,
+  Drawer,
 } from "antd";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
@@ -32,6 +33,8 @@ const Header = () => {
 
   const dispatch = useDispatch();
   const { i18n, t } = useTranslation();
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const { flagId: currentFlagId } = useSelector(
     (state) => state.applicationSettings
@@ -87,7 +90,6 @@ const Header = () => {
           />
         </a>
       </Menu.Item>
-      <Divider />
       <Menu.Item>
         <a
           onClick={() => handleLanguageSet("en")}
@@ -115,41 +117,11 @@ const Header = () => {
     </Dropdown>
   );
 
-  const MobileNavigationMenu = (
-    <Menu mode="inline">
-      {internalLinks.map((link, i) => {
-        return (
-          <>
-            {i > 0 && <Divider />}
-            <Menu.Item
-              key={i}
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "1rem",
-              }}
-            >
-              {link}
-            </Menu.Item>
-          </>
-        );
-      })}
-    </Menu>
-  );
-
-  const MobileNavigationDropdown = () => {
+  const MobileNavigationButton = () => {
     return (
-      <Affix>
-        <Dropdown
-          overlay={MobileNavigationMenu}
-          trigger={["click"]}
-          overlayClassName="container"
-        >
-          <Button>
-            <MenuOutlined />
-          </Button>
-        </Dropdown>
-      </Affix>
+      <Button onClick={() => setIsDrawerOpen(true)}>
+        <MenuOutlined />
+      </Button>
     );
   };
 
@@ -161,6 +133,25 @@ const Header = () => {
         ...headerStyling,
       }}
     >
+      <Drawer
+        placement="left"
+        closable={false}
+        onClose={() => setIsDrawerOpen(false)}
+        visible={isDrawerOpen}
+        title={t("app-name")}
+      >
+        <Space direction="vertical">
+          {internalLinks.map((link, i) => (
+            <div key={i} onClick={() => setIsDrawerOpen(false)}>
+              <h3>
+                {React.cloneElement(link, {
+                  style: { display: "block", padding: "1rem 0" },
+                })}
+              </h3>
+            </div>
+          ))}
+        </Space>
+      </Drawer>
       <Container style={{ ...headerStyling }}>
         <Typography.Title
           level={2}
@@ -181,7 +172,7 @@ const Header = () => {
             }}
           >
             <Visible xs>
-              <MobileNavigationDropdown />
+              <MobileNavigationButton />
             </Visible>
             <Hidden xs>
               <Space size="large">

@@ -7,6 +7,7 @@ import withSeparator from "../../src/utils/functions/withSeparator";
 import ExternalLink from "../misc/ExternalLink";
 import InternalLink from "../misc/InternalLink";
 import ebayDevMemberLogo from "../../src/assets/images/developersprogrammember_vert.png";
+import Legal from "./Legal";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,6 +16,12 @@ const Footer = () => {
       <Container>
         <Divider />
         <p style={{ fontSize: "12px" }}>{t("footer.short-desc")}</p>
+        <p style={{ fontSize: "12px" }}>
+          <ExternalLink href="https://www.ebay.com/help/policies/listing-policies/listing-policies?id=4213">
+            eBay Grundsätze für das Einstellen von Artikeln{" "}
+            {new Date().getFullYear()}
+          </ExternalLink>
+        </p>
         <p>
           <img
             src={ebayDevMemberLogo}
@@ -23,38 +30,7 @@ const Footer = () => {
           />
         </p>
         <p style={{ fontSize: "12px" }}>{t("footer.disclaimer")}</p>
-        <p>
-          <span>
-            {withSeparator(
-              [
-                <InternalLink href="/imprint">
-                  <a>{t("footer.imprint")}</a>
-                </InternalLink>,
-                <InternalLink href="/privacy">
-                  <a>{t("footer.privacy")}</a>
-                </InternalLink>,
-                <InternalLink href="/terms">
-                  <a>{t("footer.terms")}</a>
-                </InternalLink>,
-              ],
-              LINK_SEPARATOR
-            )}
-          </span>
-        </p>
-        <p>
-          {withSeparator(
-            [
-              <>
-                © {new Date().getFullYear()}{" "}
-                <ExternalLink href="https://quikk.de">QUIKK</ExternalLink>
-              </>,
-              <ExternalLink href="https://quikk.de/kontakt">
-                {t("footer.contact")}
-              </ExternalLink>,
-            ],
-            LINK_SEPARATOR
-          )}
-        </p>
+        <Legal />
       </Container>
     </footer>
   );

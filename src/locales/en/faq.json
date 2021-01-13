@@ -4,55 +4,59 @@
   "heading": "FAQ",
   "subheading": "$t(faq:desc)",
   "1": {
-    "q": "What is Auction Template?",
-    "a": "Auction Template allows anybody to create an attractive product description for their existing eBay listings. In contrast to many other available solutions online, our editor is fully automated and requires no manual entries, since we get the data directly from official eBay sources. Auction Template is completely free and easy to use."
+    "q": "Was ist Auction Template?",
+    "a": "Auction Template ermöglicht das automatisierte Erstellen von attraktiven Produktbeschreibungen für bestehende eBay Inserate. Im Gegensatz zu anderen Lösungen im Internet ist unser Editor vollständig automatisiert und mit offiziellen eBay Schnittstellen verbunden, sodass keine manuelle Doppelpflege der Produktinformationen erforderlich ist."
   },
   "2": {
-    "q": "How does Auction Template differ from existing solutions?",
+    "q": "Was unterscheidet Auction Template von der Konkurrenz?",
     "a": ""
   },
   "3": {
-    "q": "Is Auction Template secure?",
+    "q": "Welche Richtlinien muss ein eBay Template erfüllen?",
     "a": ""
   },
   "4": {
-    "q": "Is Auction Template compliant to eBay guidelines?",
+    "q": "Ist Auction Template eBay Richtlinien konform?",
     "a": ""
   },
   "5": {
-    "q": "Is Auction Template free to use?",
+    "q": "Ist Auction Template sicher?",
     "a": ""
   },
   "6": {
-    "q": "How can I load an eBay listing?",
+    "q": "Ist Auction Template wirklich kostenlos?",
     "a": ""
   },
   "7": {
-    "q": "How many auction templates can I create?",
+    "q": "Wie kann ich ein eBay Produkt einladen?",
     "a": ""
   },
   "8": {
-    "q": "Am I allowed to create auction templates for multiple eBay accounts?",
+    "q": "Wie viele Auktionsvorlagen kann ich mit Auction Template erstellen?",
     "a": ""
   },
   "9": {
-    "q": "Are the generated auction templates customizable?",
+    "q": "Kann ich Auktionsvorlagen für mehrere eBay Konten erstellen?",
     "a": ""
   },
   "10": {
-    "q": "How do I add an auction template to my eBay listing?",
+    "q": "Lassen sich die generierten Auktionsvorlagen anpassen?",
     "a": ""
   },
   "11": {
-    "q": "Are there any advantages for entrepreneurs and companies?",
+    "q": "Wie füge ich die Auktionsvorlage meinem eBay Inserat hinzu?",
     "a": ""
   },
   "12": {
-    "q": "How can I contact the developers?",
+    "q": "Gibt es Vorteile für Gewerbetreibende?",
     "a": ""
   },
   "13": {
-    "q": "I have more questions",
+    "q": "Wie kann ich die Entwickler kontaktieren?",
+    "a": ""
+  },
+  "14": {
+    "q": "Ich habe weitere Fragen",
     "a": ""
   }
 }

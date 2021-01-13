@@ -31,19 +31,19 @@ const Features = () => {
         </FeatureCard>
         <FeatureCard
           title="Sicher"
-          description="Auction Template benötigt keine Zugangsdaten - weder für Ihr eBay Konto noch für unsere Software."
+          description="Auction Template ist webbasiert und benötigt für die Benutzung weder einen Download noch Ihre eBay Zugangsdaten."
         >
           <LockOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
           title="Innovativer Editor"
-          description="Auction Template benötigt keine Vorkenntnisse, um Auktionsvorlagen zu konfigurieren."
+          description="Auction Template kann problemlos ohne Vorkenntnisse bedient werden, um Auktionsvorlagen zu konfigurieren."
         >
           <BgColorsOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>
         <FeatureCard
           title="Modernes Design"
-          description="Auction Template vereint stylische Auktionsvorlagen mit Optimierung für mobile Endgeräte."
+          description="Auction Template vereint stylische Auktionsvorlagen mit responsive Optimierung für mobile Endgeräte."
         >
           <LayoutOutlined style={{ fontSize: "24px" }} />
         </FeatureCard>

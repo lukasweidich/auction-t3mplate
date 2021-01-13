@@ -11,7 +11,7 @@ const FAQScreen = () => {
       <h1>{t("faq:heading")}</h1>
       <p>{t("faq:subheading")}</p>
       <Collapse accordion>
-        {[...Array(13)]
+        {[...Array(14)]
           .map((el, i) => i + 1)
           .map((key) => (
             <Panel header={t(`faq:${key}.q`)} key={key}>

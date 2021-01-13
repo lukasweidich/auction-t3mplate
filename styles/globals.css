@@ -30,19 +30,16 @@ a {
   margin-top: calc(2 * var(--divider-margin) - 4px);
 }
 
-.ant-dropdown-menu .ant-divider {
-  margin: 0;
-}
-
-.ant-dropdown.container {
-  left: 0 !important;
-}
-
 header .ant-affix {
   z-index: var(--header-z-index);
   background-color: var(--background-color);
 }
 
-ul {
-  list-style: none;
+.ant-space.ant-space-vertical {
+  width: 100%;
+}
+
+.ant-drawer-body a {
+  display: block;
+  padding: 1rem 0;
 }

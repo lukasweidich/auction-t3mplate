@@ -6,7 +6,7 @@ import { Row, Col } from "react-grid-system";
 import {
   CopyOutlined,
   HighlightOutlined,
-  RiseOutlined,
+  TrophyOutlined,
   TagOutlined,
   OrderedListOutlined,
 } from "@ant-design/icons";
@@ -46,7 +46,7 @@ const ATSteps = () => {
             <Step
               title="Zurücklehnen"
               description="Im Kaufprozess des Online-Shoppings sind aussagekräftige Produktbeschreibungen und ansprechende Produktbilder elementar für eine Kaufentscheidung potentieller Kunden. ¹"
-              icon={<RiseOutlined />}
+              icon={<TrophyOutlined />}
             />
           </Steps>
           <p style={{ fontSize: "12px" }}>
