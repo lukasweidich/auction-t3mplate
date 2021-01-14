@@ -3,3 +3,6 @@ export const buildMessageForSellerItems = ({ items }) =>
 
 export const buildMessageForItem = ({ item }) =>
   `Successfully loaded ${item.Title}.`;
+
+export const buildErrorMessageForSellerItems = ({ sellerId }) =>
+  `An error occured when trying to load items of ${sellerId}.`;

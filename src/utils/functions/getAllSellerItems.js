@@ -7,6 +7,7 @@ import {
   DEFAULT_SITE_ID,
 } from "../constants/ebayApiDefaults";
 import { getMappingFromSiteId } from "../constants/ebaySiteIdMappings";
+import { buildErrorMessageForSellerItems } from "../functions/ebayApiResponseMessageBuilder";
 
 const getAllSellerItems = async ({
   pageNumber = DEFAULT_PAGE_NUMBER,
@@ -15,56 +16,66 @@ const getAllSellerItems = async ({
   siteId = DEFAULT_SITE_ID,
   sellerItems = [],
 }) => {
-  const { data: dataInXml } = await Axios.get(
-    buildEndpointForSellerItems({
-      sellerId,
-      siteId,
-      pageNumber: pageNumber,
-    })
-  );
+  try {
+    const result = await Axios.get(
+      buildEndpointForSellerItems({
+        sellerId,
+        siteId,
+        pageNumber: pageNumber,
+      })
+    );
 
-  const dataInJson = await parseStringPromise(dataInXml, {
-    explicitArray: false,
-  });
+    const { data: dataInXml } = result;
+    const dataInJson = await parseStringPromise(dataInXml, {
+      explicitArray: false,
+    });
 
-  const {
-    findItemsAdvancedResponse,
-    findItemsAdvancedResponse: { ack: status, errorMessage: errorObject },
-  } = dataInJson;
-
-  if (status !== EBAY_FAILURE) {
     const {
-      searchResult: { item: items },
-      paginationOutput: { pageNumber, totalPages },
-    } = findItemsAdvancedResponse;
+      findItemsAdvancedResponse,
+      findItemsAdvancedResponse: { ack: status, errorMessage: errorObject },
+    } = dataInJson;
 
-    if (items && Array.isArray(items)) {
-      sellerItems.push(...items);
+    if (status !== EBAY_FAILURE) {
+      const {
+        searchResult: { item: items },
+        paginationOutput: { pageNumber, totalPages },
+      } = findItemsAdvancedResponse;
 
-      if (pageNumber < totalPages) {
-        return getAllSellerItems({
-          sellerId,
-          siteId,
-          totalPages,
-          pageNumber: Number(pageNumber) + 1,
-          sellerItems,
-        });
-      }
-      return { items: sellerItems, status };
-    } else {
-      return {
-        errorObject: {
-          error: {
-            message: `Seller ${sellerId} currently has no listings in ${
-              getMappingFromSiteId(siteId).siteName
-            }.`,
+      if (items && Array.isArray(items)) {
+        sellerItems.push(...items);
+
+        if (pageNumber < totalPages) {
+          return getAllSellerItems({
+            sellerId,
+            siteId,
+            totalPages,
+            pageNumber: Number(pageNumber) + 1,
+            sellerItems,
+          });
+        }
+        return { items: sellerItems, status };
+      } else {
+        return {
+          errorObject: {
+            error: {
+              message: `Seller ${sellerId} currently has no listings in ${
+                getMappingFromSiteId(siteId).siteName
+              }.`,
+            },
           },
-        },
-        status: EBAY_WARNING,
-      };
+          status: EBAY_WARNING,
+        };
+      }
+    } else {
+      return { errorObject, status };
     }
-  } else {
-    return { errorObject, status };
+  } catch (err) {
+    return {
+      status: EBAY_FAILURE,
+      errorObject: {
+        error: { message: buildErrorMessageForSellerItems({ sellerId }) },
+      },
+    };
   }
 };
 
