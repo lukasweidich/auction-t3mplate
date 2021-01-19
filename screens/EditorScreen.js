@@ -8,7 +8,7 @@ const EditorScreen = () => {
   return (
     <>
       <TitleDivider level={1} title={t("header.editor")} />
-      {/* <ItemInput /> */}
+      <ItemInput />
     </>
   );
 };

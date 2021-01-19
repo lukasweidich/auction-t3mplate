@@ -24,7 +24,8 @@
     "body": "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer",
     "privacy": "Datenschutzerklärung",
     "okText": "Cookies erlauben",
-    "cancelText": "Cookies ablehnen"
+    "cancelText": "Cookies ablehnen",
+    "manageCookies": "Cookies verwalten"
   },
   "actions": {
     "load": "Laden",

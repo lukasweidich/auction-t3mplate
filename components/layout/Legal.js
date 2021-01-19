@@ -11,6 +11,11 @@ const Legal = () => {
   return (
     <>
       <p>
+        <a onClick={() => alert("Work in Progress")}>
+          {t("cookies.manageCookies")}
+        </a>
+      </p>
+      <p>
         <span>
           {withSeparator(
             [

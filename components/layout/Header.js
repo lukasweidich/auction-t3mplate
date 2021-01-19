@@ -25,6 +25,8 @@ import {
 } from "@ant-design/icons";
 import { Visible, Hidden } from "react-grid-system";
 
+import atLogo from "../../src/assets/images/at-logo.png";
+
 const Header = () => {
   const headerStyling = {
     zIndex: "var(--header-z-index)",
@@ -126,41 +128,47 @@ const Header = () => {
   };
 
   return (
-    <header
+    <Affix
       style={{
         height: "var(--header-height)",
         width: "100%",
         ...headerStyling,
       }}
     >
-      <Drawer
-        placement="left"
-        closable={false}
-        onClose={() => setIsDrawerOpen(false)}
-        visible={isDrawerOpen}
+      <header
+        style={{
+          height: "var(--header-height)",
+          width: "100%",
+          ...headerStyling,
+        }}
       >
-        <Space direction="vertical">
-          {internalLinks.map((link, i) => (
-            <div key={i} onClick={() => setIsDrawerOpen(false)}>
-              <h3>
-                {React.cloneElement(link, {
-                  style: { display: "block", padding: "1rem 0" },
-                })}
-              </h3>
-            </div>
-          ))}
-        </Space>
-      </Drawer>
-      <Container style={{ ...headerStyling }}>
-        <Typography.Title
-          level={2}
-          style={{ margin: "var(--divider-margin) 0 0 0" }}
+        <Drawer
+          placement="left"
+          closable={false}
+          onClose={() => setIsDrawerOpen(false)}
+          visible={isDrawerOpen}
         >
-          <InternalLink href="/">
-            <a>{t("app-name")}</a>
-          </InternalLink>
-        </Typography.Title>
-        <Affix style={{ ...headerStyling }}>
+          <Space direction="vertical">
+            {internalLinks.map((link, i) => (
+              <div key={i} onClick={() => setIsDrawerOpen(false)}>
+                <h3>
+                  {React.cloneElement(link, {
+                    style: { display: "block", padding: "1rem 0" },
+                  })}
+                </h3>
+              </div>
+            ))}
+          </Space>
+        </Drawer>
+        <Container style={{ ...headerStyling }}>
+          <Typography.Title
+            level={2}
+            style={{ margin: "var(--divider-margin) 0 0 0" }}
+          >
+            <InternalLink href="/">
+              <img height="50rem" src={atLogo} alt="Auction Template Logo" />
+            </InternalLink>
+          </Typography.Title>
           <div
             style={{
               display: "flex",
@@ -185,9 +193,9 @@ const Header = () => {
             <FlagSelectorDropdown />
           </div>
           <Divider />
-        </Affix>
-      </Container>
-    </header>
+        </Container>
+      </header>
+    </Affix>
   );
 };
 

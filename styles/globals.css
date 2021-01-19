@@ -30,7 +30,7 @@ a {
   margin-top: calc(2 * var(--divider-margin) - 4px);
 }
 
-header .ant-affix {
+.ant-affix {
   z-index: var(--header-z-index);
   background-color: var(--background-color);
 }

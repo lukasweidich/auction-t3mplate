@@ -3,7 +3,10 @@ import thunk from "redux-thunk";
 import { rootReducer } from "./reducers/rootReducer";
 import {
   DEFAULT_LANGUAGE,
+  ITEM_ID_COOKIE_NAME,
+  ITEM_ID_KNOWN_COOKIE_NAME,
   LANGUAGE_COOKIE_NAME,
+  SELLER_COOKIE_NAME,
   SITE_ID_COOKIE_NAME,
 } from "./src/utils/constants/applicationConstants";
 import { DEFAULT_SITE_ID } from "./src/utils/constants/ebayApiDefaults";
@@ -17,11 +20,18 @@ const languageFromCookies =
 const siteIdFromCookies =
   getCookie({ key: SITE_ID_COOKIE_NAME }) ?? DEFAULT_SITE_ID;
 
+const itemIdIsKnownFromCookies =
+  getCookie({ key: ITEM_ID_KNOWN_COOKIE_NAME }) ?? false;
+
+const sellerFromCookies = getCookie({ key: SELLER_COOKIE_NAME });
+
 const initialState = {
   applicationSettings: {
     language: languageFromCookies,
     flagId: getFlagIconIdFromLanguage(languageFromCookies),
     siteId: siteIdFromCookies,
+    itemIdIsKnown: itemIdIsKnownFromCookies,
+    seller: sellerFromCookies,
   },
 };
 

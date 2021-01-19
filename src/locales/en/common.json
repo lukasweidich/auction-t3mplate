@@ -24,7 +24,8 @@
     "body": "In order to optimize our website for you and to improve it continuously, we use cookies. By continuing to use the website, you are consenting to the use of cookies. You can find more information about cookies in our",
     "privacy": "privacy statement",
     "okText": "Allow cookies",
-    "cancelText": "Reject cookies"
+    "cancelText": "Reject cookies",
+    "manageCookies": "Manage cookies"
   },
   "actions": {
     "load": "Load",
