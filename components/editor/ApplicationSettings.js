@@ -7,6 +7,7 @@ import {
   setItemIdIsKnown,
 } from "../../actions/applicationSettingsActions";
 import eBaySiteIdMappings from "../../src/utils/constants/ebaySiteIdMappings";
+import Tooltip from "../../components/misc/Tooltip";
 
 const ApplicationSettings = () => {
   const { t } = useTranslation();
@@ -25,7 +26,13 @@ const ApplicationSettings = () => {
   return (
     <Row justify="space-between">
       <Col md={9} sm={11} xs={24}>
-        <Form.Item label={t("editor:item-input.item-number-known")}>
+        <Form.Item
+          label={
+            <Tooltip tooltipText="editor:item-input.item-number-known-tip">
+              <span>{t("editor:item-input.item-number-known")}</span>
+            </Tooltip>
+          }
+        >
           <Switch
             checked={itemIdIsKnown}
             onChange={itemIdIsKnownToggleHandler}
@@ -33,7 +40,13 @@ const ApplicationSettings = () => {
         </Form.Item>
       </Col>
       <Col md={9} sm={11} xs={24}>
-        <Form.Item label={t("editor:item-input.select-ebay-country")}>
+        <Form.Item
+          label={
+            <Tooltip tooltipText="editor:item-input.select-ebay-country-tip">
+              <span>{t("editor:item-input.select-ebay-country")}</span>
+            </Tooltip>
+          }
+        >
           <Select
             showSearch
             optionFilterProp="children"

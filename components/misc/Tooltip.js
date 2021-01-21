@@ -1,15 +1,17 @@
 import React from "react";
 import { Tooltip as AntdTooltip } from "antd";
-import { QuestionOutlined } from "@ant-design/icons";
+import { QuestionCircleOutlined } from "@ant-design/icons";
 
 const Tooltip = ({ children, tooltipText }) => {
   return (
-    <>
+    <span>
       {children}{" "}
-      <AntdTooltip title={tooltipText}>
-        <QuestionOutlined />
-      </AntdTooltip>
-    </>
+      <span>
+        <AntdTooltip title={tooltipText}>
+          <QuestionCircleOutlined />
+        </AntdTooltip>
+      </span>
+    </span>
   );
 };
 

@@ -6,6 +6,7 @@ import {
   SET_SITE_ID,
   SET_SELLER,
   SET_ITEM_ID,
+  SET_SELLER_ITEMS,
 } from "../actions/types";
 
 const initialState = {};
@@ -36,6 +37,11 @@ const applicationSettingsReducer = (state = initialState, action) => {
         ...payload,
       };
     case SET_SELLER:
+      return {
+        ...state,
+        ...payload,
+      };
+    case SET_SELLER_ITEMS:
       return {
         ...state,
         ...payload,

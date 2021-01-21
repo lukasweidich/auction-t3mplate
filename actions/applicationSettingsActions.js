@@ -5,6 +5,7 @@ import {
   SET_ITEM_ID_KNOWN,
   SET_LANGUAGE,
   SET_SELLER,
+  SET_SELLER_ITEMS,
   SET_SITE_ID,
 } from "./types";
 import { saveCookie } from "../src/utils/functions/cookieUtils";
@@ -59,6 +60,13 @@ export const setSeller = ({ seller }) => async (dispatch) => {
     payload: { seller },
   });
   saveCookie({ key: SELLER_COOKIE_NAME, value: seller });
+};
+
+export const setSellerItems = ({ sellerItems }) => async (dispatch) => {
+  dispatch({
+    type: SET_SELLER_ITEMS,
+    payload: { sellerItems },
+  });
 };
 
 export const loadApplicationSettings = () => async (dispatch) => {

@@ -20,7 +20,7 @@ import { getFlagIconIdFromLanguage } from "../../src/utils/functions/languageUti
 import {
   HomeOutlined,
   FormOutlined,
-  QuestionCircleOutlined,
+  CommentOutlined,
   InfoCircleOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
@@ -73,7 +73,7 @@ const Header = () => {
     </InternalLink>,
     <InternalLink href="/faq">
       <a>
-        <QuestionCircleOutlined /> {t("header.faq")}
+        <CommentOutlined /> {t("header.faq")}
       </a>
     </InternalLink>,
     <InternalLink href="/about">

@@ -53,7 +53,6 @@ export default async (req, res) => {
         res.status(405).send(`Method ${method} Not Allowed`);
     }
   } catch (error) {
-    console.log(error);
     res.status(500).json({
       message: buildErrorMessageForItem({ itemId }),
       status: EBAY_FAILURE,

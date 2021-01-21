@@ -4,14 +4,17 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { setItemId, setSeller } from "../../actions/applicationSettingsActions";
+import {
+  setItemId,
+  setSeller,
+  setSellerItems,
+} from "../../actions/applicationSettingsActions";
 
 import { buildMessageForStatus } from "../../src/utils/functions/statusMessageBuilder";
 import validate from "../../src/utils/functions/validateAxiosStatusCodes";
 
 const SelectItem = () => {
   const [sellerItemsLoading, setSellerItemsLoading] = useState(false);
-  const [sellerItems, setSellerItems] = useState([]);
 
   const sellerItemsLoadingSuffix = sellerItemsLoading && (
     <Spin style={{ display: "flex" }} />
@@ -20,10 +23,16 @@ const SelectItem = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const applicationSettings = useSelector((state) => state.applicationSettings);
-  const { seller, itemIdIsKnown, siteId, itemId } = applicationSettings;
+  const {
+    seller,
+    sellerItems,
+    itemIdIsKnown,
+    siteId,
+    itemId,
+  } = applicationSettings;
 
   const resetSellerItems = () => {
-    setSellerItems([]);
+    dispatch(setSellerItems({ sellerItems: [] }));
     dispatch(setItemId({ itemId: null }));
   };
 
@@ -52,7 +61,7 @@ const SelectItem = () => {
           ...validate,
         }
       );
-      setSellerItems(items);
+      dispatch(setSellerItems({ sellerItems: items }));
       buildMessageForStatus({ ...{ status, message } });
     } else {
       message.warning("Please enter your eBay username");
@@ -99,7 +108,7 @@ const SelectItem = () => {
               onChange={onSelectItemId}
               value={itemId || null}
             >
-              {sellerItems.map((sellerItem, i) => {
+              {sellerItems?.map((sellerItem, i) => {
                 return (
                   <Select.Option value={sellerItem.itemId} key={i}>
                     {sellerItem.title}
