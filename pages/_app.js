@@ -13,8 +13,11 @@ import { Provider } from "react-redux";
 import store from "../store";
 import { BackTop } from "antd";
 import CookieConsentModal from "../components/misc/CookieConsentModal";
+import { useTranslation } from "react-i18next";
 
 const MyApp = ({ Component, pageProps }) => {
+  const { t } = useTranslation();
+
   return (
     <Provider {...{ store }}>
       <GetLanguageFromStore />

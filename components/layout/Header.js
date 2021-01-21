@@ -8,6 +8,7 @@ import {
   Typography,
   Drawer,
   Grid,
+  Alert,
 } from "antd";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
@@ -133,90 +134,93 @@ const Header = () => {
   };
 
   return (
-    <Affix
-      style={{
-        height: xs ? "var(--header-mobile-height)" : "var(--header-height)",
-        width: "100%",
-        ...headerStyling,
-      }}
-    >
-      <header
+    <>
+      <Alert message={t("dev-alert")} type="info" banner closable />
+      <Affix
         style={{
           height: xs ? "var(--header-mobile-height)" : "var(--header-height)",
           width: "100%",
           ...headerStyling,
         }}
       >
-        <Drawer
-          placement="right"
-          closable={false}
-          onClose={() => setIsDrawerOpen(false)}
-          visible={isDrawerOpen}
+        <header
+          style={{
+            height: xs ? "var(--header-mobile-height)" : "var(--header-height)",
+            width: "100%",
+            ...headerStyling,
+          }}
         >
-          <Space direction="vertical">
-            {internalLinks.map((link, i) => (
-              <div key={i} onClick={() => setIsDrawerOpen(false)}>
-                <h3>
-                  {React.cloneElement(link, {
-                    style: { display: "block", padding: "1rem 0" },
-                  })}
-                </h3>
-              </div>
-            ))}
-            <FlagSelectorDropdown />
-          </Space>
-        </Drawer>
-        <Container style={{ ...headerStyling }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "flex-end",
-              justifyContent: "space-between",
-            }}
+          <Drawer
+            placement="right"
+            closable={false}
+            onClose={() => setIsDrawerOpen(false)}
+            visible={isDrawerOpen}
           >
-            <InternalLink href="/">
-              <Typography.Title
-                level={2}
-                style={{ margin: "var(--divider-margin) 0 0 0" }}
-              >
-                <img
-                  height="50rem"
-                  src={atLogo}
-                  alt="Auction Template Logo"
-                  style={{ cursor: "pointer" }}
-                />
-              </Typography.Title>
-            </InternalLink>
-            <Visible xs>
-              <MobileNavigationButton />
-            </Visible>
-          </div>
-          <Hidden xs>
+            <Space direction="vertical">
+              {internalLinks.map((link, i) => (
+                <div key={i} onClick={() => setIsDrawerOpen(false)}>
+                  <h3>
+                    {React.cloneElement(link, {
+                      style: { display: "block", padding: "1rem 0" },
+                    })}
+                  </h3>
+                </div>
+              ))}
+              <FlagSelectorDropdown />
+            </Space>
+          </Drawer>
+          <Container style={{ ...headerStyling }}>
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
+                alignItems: "flex-end",
                 justifyContent: "space-between",
-                paddingTop: "var(--divider-margin)",
-                verticalAlign: "bottom",
               }}
             >
-              <Space size="large">
-                {internalLinks.map((link, i) => (
-                  <h3 key={i} style={{ margin: 0 }}>
-                    {link}
-                  </h3>
-                ))}
-              </Space>
-              <FlagSelectorDropdown />
+              <InternalLink href="/">
+                <Typography.Title
+                  level={2}
+                  style={{ margin: "var(--divider-margin) 0 0 0" }}
+                >
+                  <img
+                    height="50rem"
+                    src={atLogo}
+                    alt="Auction Template Logo"
+                    style={{ cursor: "pointer" }}
+                  />
+                </Typography.Title>
+              </InternalLink>
+              <Visible xs>
+                <MobileNavigationButton />
+              </Visible>
             </div>
-          </Hidden>
-          <Divider />
-        </Container>
-      </header>
-    </Affix>
+            <Hidden xs>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingTop: "var(--divider-margin)",
+                  verticalAlign: "bottom",
+                }}
+              >
+                <Space size="large">
+                  {internalLinks.map((link, i) => (
+                    <h3 key={i} style={{ margin: 0 }}>
+                      {link}
+                    </h3>
+                  ))}
+                </Space>
+                <FlagSelectorDropdown />
+              </div>
+            </Hidden>
+            <Divider />
+          </Container>
+        </header>
+      </Affix>
+    </>
   );
 };
 
