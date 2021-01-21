@@ -45,7 +45,7 @@ const DefaultSEO = () => {
     "auktionsvorlage",
     "verkaufsvorlage",
   ];
-  const googleSiteVerification = "";
+  const googleSiteVerification = "zkClEiO2CXbLVQ9ROLHO1F4D9AAqMjk9wWfN60340r0";
   const url = "https://auction-template.de";
   const favicon = "/favicon.ico";
   const image = `${url}${favicon}`;
