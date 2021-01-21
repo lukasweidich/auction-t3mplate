@@ -4,7 +4,7 @@ import Features from "../components/index/Features";
 import ATSteps from "../components/index/ATSteps";
 
 const Wrapper = ({ children, noTop = false, noBottom = false }) => {
-  const dist = "15vh";
+  const dist = "20vh";
   return (
     <section
       style={{
@@ -20,11 +20,13 @@ const Wrapper = ({ children, noTop = false, noBottom = false }) => {
 const IndexScreen = () => {
   return (
     <>
-      <Hero />
-      <Wrapper noTop>
-        <Features />
+      <Wrapper noBottom>
+        <Hero />
       </Wrapper>
       <Wrapper noBottom>
+        <Features />
+      </Wrapper>
+      <Wrapper>
         <ATSteps />
       </Wrapper>
     </>

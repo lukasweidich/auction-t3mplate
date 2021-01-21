@@ -7,6 +7,7 @@ import {
   Button,
   Typography,
   Drawer,
+  Grid,
 } from "antd";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
@@ -27,7 +28,11 @@ import { Visible, Hidden } from "react-grid-system";
 
 import atLogo from "../../src/assets/images/at-logo.png";
 
+const { useBreakpoint } = Grid;
+
 const Header = () => {
+  const { xs, sm, md, lg, xl } = useBreakpoint();
+
   const headerStyling = {
     zIndex: "var(--header-z-index)",
     backgroundColor: "var(--background-color)",
@@ -130,20 +135,20 @@ const Header = () => {
   return (
     <Affix
       style={{
-        height: "var(--header-height)",
+        height: xs ? "var(--header-mobile-height)" : "var(--header-height)",
         width: "100%",
         ...headerStyling,
       }}
     >
       <header
         style={{
-          height: "var(--header-height)",
+          height: xs ? "var(--header-mobile-height)" : "var(--header-height)",
           width: "100%",
           ...headerStyling,
         }}
       >
         <Drawer
-          placement="left"
+          placement="right"
           closable={false}
           onClose={() => setIsDrawerOpen(false)}
           visible={isDrawerOpen}
@@ -158,30 +163,41 @@ const Header = () => {
                 </h3>
               </div>
             ))}
+            <FlagSelectorDropdown />
           </Space>
         </Drawer>
         <Container style={{ ...headerStyling }}>
-          <Typography.Title
-            level={2}
-            style={{ margin: "var(--divider-margin) 0 0 0" }}
-          >
-            <InternalLink href="/">
-              <img height="50rem" src={atLogo} alt="Auction Template Logo" />
-            </InternalLink>
-          </Typography.Title>
           <div
             style={{
               display: "flex",
               flexDirection: "row",
-              alignItems: "center",
+              alignItems: "flex-end",
               justifyContent: "space-between",
-              paddingTop: "var(--divider-margin)",
             }}
           >
+            <Typography.Title
+              level={2}
+              style={{ margin: "var(--divider-margin) 0 0 0" }}
+            >
+              <InternalLink href="/">
+                <img height="50rem" src={atLogo} alt="Auction Template Logo" />
+              </InternalLink>
+            </Typography.Title>
             <Visible xs>
               <MobileNavigationButton />
             </Visible>
-            <Hidden xs>
+          </div>
+          <Hidden xs>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                paddingTop: "var(--divider-margin)",
+                verticalAlign: "bottom",
+              }}
+            >
               <Space size="large">
                 {internalLinks.map((link, i) => (
                   <h3 key={i} style={{ margin: 0 }}>
@@ -189,9 +205,9 @@ const Header = () => {
                   </h3>
                 ))}
               </Space>
-            </Hidden>
-            <FlagSelectorDropdown />
-          </div>
+              <FlagSelectorDropdown />
+            </div>
+          </Hidden>
           <Divider />
         </Container>
       </header>

@@ -6,7 +6,6 @@ import {
 
 export const saveCookie = ({ key, value, cc = false }) => {
   if (isCookieAvailable({ key: COOKIE_CONSENT_NAME }) || cc) {
-    console.log(`saved cookie ${key}: ${value}`);
     Cookies.set(key, JSON.stringify(value), {
       expires: COOKIE_DURATION_IN_DAYS,
     });

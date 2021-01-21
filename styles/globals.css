@@ -1,5 +1,6 @@
 :root {
   --header-height: 118px;
+  --header-mobile-height: 99px;
   --header-z-index: 100;
   --divider-margin: 24px;
   --background-color: #fff;

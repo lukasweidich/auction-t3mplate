@@ -9,7 +9,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <Row style={{ minHeight: "60vh", alignItems: "center" }}>
+    <Row style={{ alignItems: "center" }}>
       <Col md={12} lg={6}>
         <Typography.Title level={1}>{t("index:hero.heading")}</Typography.Title>
         <Typography.Title level={4}>
