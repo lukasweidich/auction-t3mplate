@@ -73,7 +73,11 @@ const getAllSellerItems = async ({
     return {
       status: EBAY_FAILURE,
       errorObject: {
-        error: { message: buildErrorMessageForSellerItems({ sellerId }) },
+        error: {
+          message: buildErrorMessageForSellerItems({
+            sellerId,
+          }),
+        },
       },
     };
   }

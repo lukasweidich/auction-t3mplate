@@ -22,7 +22,13 @@ const SelectItem = () => {
   const applicationSettings = useSelector((state) => state.applicationSettings);
   const { seller, itemIdIsKnown, siteId, itemId } = applicationSettings;
 
+  const resetSellerItems = () => {
+    setSellerItems([]);
+    dispatch(setItemId({ itemId: null }));
+  };
+
   const onChangeSeller = (e) => {
+    resetSellerItems();
     dispatch(setSeller({ seller: e.target.value }));
   };
 
@@ -35,13 +41,17 @@ const SelectItem = () => {
   };
 
   const onSearchHandler = async () => {
+    resetSellerItems();
     setSellerItemsLoading(true);
     if (seller) {
       const {
         data: { items = [], message, status },
-      } = await axios.get(`/api/sellers/${seller}?siteId=${siteId}`, {
-        ...validate,
-      });
+      } = await axios.get(
+        `/api/sellers/${encodeURIComponent(seller)}?siteId=${siteId}`,
+        {
+          ...validate,
+        }
+      );
       setSellerItems(items);
       buildMessageForStatus({ ...{ status, message } });
     } else {

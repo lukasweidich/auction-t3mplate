@@ -28,7 +28,17 @@ a {
 }
 #__next > main {
   flex: 1 1 auto;
-  margin-top: calc(2 * var(--divider-margin) - 4px);
+  margin-top: calc(2.5 * var(--divider-margin) - 4px);
+}
+
+@media only screen and (max-width: 575px) {
+  #__next > main {
+    flex: 1 1 auto;
+    margin-top: calc(
+      (2 * var(--divider-margin) - 6px) -
+        (var(--header-height) - var(--header-mobile-height))
+    );
+  }
 }
 
 .ant-affix {

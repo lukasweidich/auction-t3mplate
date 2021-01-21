@@ -13,7 +13,6 @@ import {
   LANGUAGE_COOKIE_NAME,
   SITE_ID_COOKIE_NAME,
   ITEM_ID_KNOWN_COOKIE_NAME,
-  ITEM_ID_COOKIE_NAME,
   SELLER_COOKIE_NAME,
 } from "../src/utils/constants/applicationConstants";
 
@@ -52,7 +51,6 @@ export const setItemId = ({ itemId }) => async (dispatch) => {
     type: SET_ITEM_ID,
     payload: { itemId },
   });
-  saveCookie({ key: ITEM_ID_COOKIE_NAME, value: itemId });
 };
 
 export const setSeller = ({ seller }) => async (dispatch) => {

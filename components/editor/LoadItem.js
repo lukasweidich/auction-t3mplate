@@ -1,12 +1,15 @@
 import { Form, Checkbox, Button } from "antd";
 import axios from "axios";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { buildMessageForStatus } from "../../src/utils/functions/statusMessageBuilder";
 import InternalLink from "../misc/InternalLink";
 import validate from "../../src/utils/functions/validateAxiosStatusCodes";
+import { setItem } from "../../actions/templateActions";
 
 const LoadItem = () => {
+  const dispatch = useDispatch();
+
   const applicationSettings = useSelector((state) => state.applicationSettings);
   const { itemId, siteId } = applicationSettings;
 
@@ -23,7 +26,7 @@ const LoadItem = () => {
       ...validate,
     });
     buildMessageForStatus({ ...{ status, message } });
-    console.log(item);
+    dispatch(setItem({ item }));
   };
 
   return (
@@ -31,7 +34,7 @@ const LoadItem = () => {
       <Form.Item>
         <Checkbox
           onChange={() => setAgreedToTerms(!agreedToTerms)}
-          checked={false}
+          checked={agreedToTerms}
         >
           Ich habe die{" "}
           <InternalLink href="/terms">

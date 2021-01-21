@@ -4,7 +4,6 @@ import {
   SET_ITEM_ID_KNOWN,
   SET_LANGUAGE,
   SET_SITE_ID,
-  SET_ITEM,
   SET_SELLER,
   SET_ITEM_ID,
 } from "../actions/types";
