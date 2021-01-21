@@ -7,7 +7,7 @@ const AboutScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <TitleDivider level={1} title={t("header.about")} />
+      <TitleDivider level={1} title={t("header.about")} onlyTitle />
       <p>{t("faq:1.a")}</p>
       <h2>{t("about:motivation.title")}</h2>
       <p>{t("about:motivation.body")}</p>

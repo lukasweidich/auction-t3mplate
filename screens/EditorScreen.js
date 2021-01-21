@@ -7,7 +7,7 @@ const EditorScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <TitleDivider level={1} title={t("header.editor")} />
+      <TitleDivider level={1} title={t("header.editor")} onlyTitle />
       <ItemInput />
     </>
   );

@@ -9,7 +9,7 @@ const FAQScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <TitleDivider level={1} title={t("header.faq")} />
+      <TitleDivider level={1} title={t("header.faq")} onlyTitle />
       <p>{t("faq:subheading")}</p>
       <Collapse accordion>
         {[...Array(14)]

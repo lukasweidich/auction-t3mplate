@@ -6,7 +6,7 @@ const TermsScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <TitleDivider level={1} title={t("footer.terms")} />
+      <TitleDivider level={1} title={t("footer.terms")} onlyTitle />
     </>
   );
 };

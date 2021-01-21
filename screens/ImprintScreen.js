@@ -6,7 +6,7 @@ const ImprintScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <TitleDivider level={1} title={t("footer.imprint")} />
+      <TitleDivider level={1} title={t("footer.imprint")} onlyTitle />
     </>
   );
 };

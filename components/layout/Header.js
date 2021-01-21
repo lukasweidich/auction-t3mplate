@@ -175,14 +175,19 @@ const Header = () => {
               justifyContent: "space-between",
             }}
           >
-            <Typography.Title
-              level={2}
-              style={{ margin: "var(--divider-margin) 0 0 0" }}
-            >
-              <InternalLink href="/">
-                <img height="50rem" src={atLogo} alt="Auction Template Logo" />
-              </InternalLink>
-            </Typography.Title>
+            <InternalLink href="/">
+              <Typography.Title
+                level={2}
+                style={{ margin: "var(--divider-margin) 0 0 0" }}
+              >
+                <img
+                  height="50rem"
+                  src={atLogo}
+                  alt="Auction Template Logo"
+                  style={{ cursor: "pointer" }}
+                />
+              </Typography.Title>
+            </InternalLink>
             <Visible xs>
               <MobileNavigationButton />
             </Visible>

@@ -6,7 +6,7 @@ const PrivacyScreen = () => {
   const { t } = useTranslation();
   return (
     <>
-      <TitleDivider level={1} title={t("footer.privacy")} />
+      <TitleDivider level={1} title={t("footer.privacy")} onlyTitle />
     </>
   );
 };
