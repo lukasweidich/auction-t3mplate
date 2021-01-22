@@ -27,7 +27,6 @@ const LoadItem = () => {
     } = await axios.get(`/api/items/${itemId}?siteId=${siteId}`, {
       ...validate,
     });
-    buildMessageForStatus({ ...{ status, message } });
     dispatch(setItem({ item }));
     const { data } = await axios.post(
       `/api/db/loadItem`,
@@ -47,7 +46,7 @@ const LoadItem = () => {
         ...validate,
       }
     );
-    console.log(data);
+    buildMessageForStatus({ ...{ status, message } });
     setLoading(false);
   };
 
