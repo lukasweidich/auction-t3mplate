@@ -8,7 +8,17 @@
   },
   "contact": {
     "title": "Contact",
-    "body": "We are at your disposal for questions, feature requests or cooperations. You will find the link to the contact form a little further down on this page."
+    "body": "We are at your disposal for questions, feature requests or cooperations. You can find the link to the contact form in the footer of this page. To track any problems, bugs or feature requests, we work with GitHub Issues. The link to the repository can be found below."
   },
-  "thanks": "Thank you for using Auction Template!"
+  "code": "Source code on GitHub",
+  "roadmap": {
+    "title": "Roadmap",
+    "body": "For future versions of Auction Template we are planning an improved eBay integration, so that the product description no longer has to be inserted manually. This will also provide the ability to create and include a description for multiple (or all) listings of a seller with one click. With an optional user account, it should be possible to save texts and reuse them across all listings. Joyce and I are pursuing these ambitious goals in addition to our regular jobs and our master's degree in computer science. That's why we appreciate any support in the form of feedback, participation or a donation."
+  },
+  "donate": {
+    "title": "Support us",
+    "link": "https://www.paypal.com/donate/?hosted_button_id=SBAY73ETN3HSS",
+    "text": "Support further development and the team behind Auction Template"
+  },
+  "thanks": "Thank you for using and supporting Auction Template!"
 }

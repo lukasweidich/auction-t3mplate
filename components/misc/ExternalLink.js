@@ -1,7 +1,12 @@
 import { ExportOutlined } from "@ant-design/icons";
 import React from "react";
 
-const ExternalLink = ({ children, noIcon, internal, ...rest }) => {
+const ExternalLink = ({
+  children,
+  noIcon = false,
+  internal = false,
+  ...rest
+}) => {
   return (
     <a
       {...rest}

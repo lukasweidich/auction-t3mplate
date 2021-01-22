@@ -14,12 +14,14 @@ const LoadItem = () => {
   const { itemId, siteId } = applicationSettings;
 
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const isButtonDisabled = () => {
     return !(itemId && agreedToTerms);
   };
 
   const handleLoadItemButtonClick = async () => {
+    setLoading(true);
     const {
       data: { item, message, status },
     } = await axios.get(`/api/items/${itemId}?siteId=${siteId}`, {
@@ -27,6 +29,7 @@ const LoadItem = () => {
     });
     buildMessageForStatus({ ...{ status, message } });
     dispatch(setItem({ item }));
+    setLoading(false);
   };
 
   return (
@@ -50,6 +53,7 @@ const LoadItem = () => {
           style={{ width: "100%" }}
           disabled={isButtonDisabled()}
           onClick={handleLoadItemButtonClick}
+          loading={loading}
         >
           Load item
         </Button>

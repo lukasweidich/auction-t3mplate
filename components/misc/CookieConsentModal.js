@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { COOKIE_CONSENT_NAME } from "../../src/utils/constants/applicationConstants";
 import {
-  saveCookie,
-  deleteAllCookies,
   isCookieAvailable,
+  rejectCookies,
+  acceptCookies,
 } from "../../src/utils/functions/cookieUtils";
 import InternalLink from "./InternalLink";
 
@@ -22,11 +22,11 @@ const CookieConsentModal = ({ open = false }) => {
 
   const handleOk = () => {
     closeModal();
-    saveCookie({ key: COOKIE_CONSENT_NAME, value: true, cc: true });
+    acceptCookies();
   };
   const handleCancel = () => {
     closeModal();
-    deleteAllCookies();
+    rejectCookies();
   };
 
   return (

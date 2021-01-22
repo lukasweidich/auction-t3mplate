@@ -15,10 +15,10 @@ const Footer = () => {
     <footer>
       <Container>
         <Divider />
-        <p style={{ fontSize: "12px" }}>
+        <p style={{ fontSize: "10px" }}>
           {t("footer.short-desc", { year: new Date().getFullYear() })}
         </p>
-        <p style={{ fontSize: "12px" }}>
+        <p>
           <ExternalLink href={t("footer.policies.url")}>
             {t("footer.policies.text", { year: new Date().getFullYear() })}
           </ExternalLink>
@@ -30,7 +30,7 @@ const Footer = () => {
             style={{ minWidth: "36px", height: "3rem" }}
           />
         </p>
-        <p style={{ fontSize: "12px" }}>{t("footer.disclaimer")}</p>
+        <p style={{ fontSize: "10px" }}>{t("footer.disclaimer")}</p>
         <Legal />
       </Container>
     </footer>

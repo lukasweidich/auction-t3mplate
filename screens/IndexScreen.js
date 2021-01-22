@@ -26,7 +26,7 @@ const IndexScreen = () => {
       <Wrapper noBottom>
         <Features />
       </Wrapper>
-      <Wrapper noBottom>
+      <Wrapper>
         <ATSteps />
       </Wrapper>
     </>

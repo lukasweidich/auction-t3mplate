@@ -11,6 +11,7 @@ import deEditor from "./src/locales/de/editor.json";
 import deImprint from "./src/locales/de/imprint.json";
 import deIndex from "./src/locales/de/index.json";
 import dePrivacy from "./src/locales/de/privacy.json";
+import deCookies from "./src/locales/de/cookies.json";
 
 import en404 from "./src/locales/en/404.json";
 import enAbout from "./src/locales/en/about.json";
@@ -20,6 +21,7 @@ import enEditor from "./src/locales/en/editor.json";
 import enImprint from "./src/locales/en/imprint.json";
 import enIndex from "./src/locales/en/index.json";
 import enPrivacy from "./src/locales/en/privacy.json";
+import enCookies from "./src/locales/en/cookies.json";
 
 import { DEFAULT_LANGUAGE } from "./src/utils/constants/applicationConstants";
 
@@ -33,6 +35,7 @@ const resources = {
     imprint: enImprint,
     index: enIndex,
     privacy: enPrivacy,
+    cookies: enCookies,
   },
   de: {
     translation: deCommon,
@@ -43,6 +46,7 @@ const resources = {
     imprint: deImprint,
     index: deIndex,
     privacy: dePrivacy,
+    cookies: deCookies,
   },
 };
 

@@ -11,9 +11,9 @@ const Legal = () => {
   return (
     <>
       <p>
-        <a onClick={() => alert("Work in Progress")}>
-          {t("cookies.manageCookies")}
-        </a>
+        <InternalLink href="/cookies">
+          <a> {t("cookies.manageCookies")}</a>
+        </InternalLink>
       </p>
       <p>
         <span>

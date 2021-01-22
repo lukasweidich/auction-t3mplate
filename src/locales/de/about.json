@@ -8,7 +8,17 @@
   },
   "contact": {
     "title": "Kontakt",
-    "body": "Wir stehen Ihnen gerne für Fragen, Feature Requests oder Kooperationen zur Verfügung. Den Link zum Kontaktformular finden Sie etwas weiter unten auf dieser Seite."
+    "body": "Wir stehen Ihnen gerne für Fragen, Feature Requests oder Kooperationen zur Verfügung. Den Link zum Kontaktformular finden in der Fußzeile auf dieser Seite. Um Probleme, Bugs oder Feature Requests festzuhalten, arbeiten wir mit GitHub Issues. Der Link zum Repository befindet sich etwas weiter unten."
   },
-  "thanks": "Vielen Dank, dass Sie Auction Template nutzen!"
+  "code": "Quellcode auf GitHub",
+  "roadmap": {
+    "title": "Roadmap",
+    "body": "Für zukünftige Versionen von Auction Template planen wir eine verbesserte eBay Integration, sodass die Produktbeschreibung nicht länger manuell eingefügt werden muss. Damit besteht außerdem die Möglichkeit, eine Beschreibung für mehrere (oder alle) Inserate eines Händlers mit einem Klick zu erstellen und einzubinden. Mit einem optionalen Nutzeraccount soll es möglich sein, Texte abzuspeichern und inseratsübergreifend wiederzuverwenden. Diese ambitionierten Ziele verfolgen Joyce und ich neben unserer regulären Berufstätigkeit und dem Informatik Masterstudium. Darum freuen wir uns über jegliche Unterstützung in Form von Feedback, Mitwirkung oder einer Spende."
+  },
+  "donate": {
+    "title": "Unterstützen Sie uns",
+    "link": "https://www.paypal.com/donate/?hosted_button_id=EYQCD52Y2YGEA",
+    "text": "Unterstützen Sie die weitere Entwicklung und das Team hinter Auction Template"
+  },
+  "thanks": "Vielen Dank, dass Sie Auction Template nutzen und unterstützen!"
 }

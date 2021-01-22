@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
       <GetLanguageFromStore />
       <DefaultSEO />
       <Header />
-      <main style={{ overflow: "hidden" }}>
+      <main>
         <Container>
           <Component {...pageProps} />
         </Container>

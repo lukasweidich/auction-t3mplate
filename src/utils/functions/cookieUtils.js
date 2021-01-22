@@ -28,3 +28,8 @@ export const deleteAllCookies = () => {
     deleteCookie({ key: cookieKey });
   });
 };
+
+export const acceptCookies = () =>
+  saveCookie({ key: COOKIE_CONSENT_NAME, value: true, cc: true });
+
+export const rejectCookies = () => deleteAllCookies();

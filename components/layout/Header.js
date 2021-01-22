@@ -151,8 +151,9 @@ const Header = () => {
           }}
         >
           <Drawer
+            title={t("app-name")}
             placement="right"
-            closable={false}
+            closable={true}
             onClose={() => setIsDrawerOpen(false)}
             visible={isDrawerOpen}
           >
