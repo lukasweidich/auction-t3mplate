@@ -15,7 +15,7 @@ import validate from "../../src/utils/functions/validateAxiosStatusCodes";
 
 const SelectItem = () => {
   const [sellerItemsLoading, setSellerItemsLoading] = useState(false);
-
+  const [sellerItemsAvailable, setSellerItemsAvailable] = useState(false);
   const sellerItemsLoadingSuffix = sellerItemsLoading && (
     <Spin style={{ display: "flex" }} />
   );
@@ -62,6 +62,7 @@ const SelectItem = () => {
         }
       );
       dispatch(setSellerItems({ sellerItems: items }));
+      setSellerItemsAvailable(items?.length > 0);
       buildMessageForStatus({ ...{ status, message } });
     } else {
       message.warning("Please enter your eBay username");
@@ -96,8 +97,8 @@ const SelectItem = () => {
           <Form.Item label="Select an eBay item">
             <Select
               placeholder={
-                seller && sellerItems?.length > 0
-                  ? "eBay item"
+                sellerItemsAvailable
+                  ? "Select an eBay item"
                   : "Enter username first"
               }
               showSearch
@@ -107,6 +108,7 @@ const SelectItem = () => {
               }
               onChange={onSelectItemId}
               value={itemId || null}
+              disabled={!sellerItemsAvailable}
             >
               {sellerItems?.map((sellerItem, i) => {
                 return (

@@ -8,7 +8,8 @@ const GetLanguageFromStore = ({ defaultLang = DEFAULT_LANGUAGE }) => {
   const applicationSettings = useSelector((state) => state.applicationSettings);
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
-  const language = applicationSettings?.language ?? defaultLang;
+  const language =
+    applicationSettings?.language ?? process.env.LANGUAGE ?? defaultLang;
 
   if (i18n.language !== language) {
     dispatch(getLanguage());
