@@ -14,12 +14,6 @@ import { buildMessageForStatus } from "../../src/utils/functions/statusMessageBu
 import validate from "../../src/utils/functions/validateAxiosStatusCodes";
 
 const SelectItem = () => {
-  const [sellerItemsLoading, setSellerItemsLoading] = useState(false);
-  const [sellerItemsAvailable, setSellerItemsAvailable] = useState(false);
-  const sellerItemsLoadingSuffix = sellerItemsLoading && (
-    <Spin style={{ display: "flex" }} />
-  );
-
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const applicationSettings = useSelector((state) => state.applicationSettings);
@@ -30,6 +24,14 @@ const SelectItem = () => {
     siteId,
     itemId,
   } = applicationSettings;
+
+  const [sellerItemsLoading, setSellerItemsLoading] = useState(false);
+  const [sellerItemsAvailable, setSellerItemsAvailable] = useState(
+    sellerItems?.length > 0
+  );
+  const sellerItemsLoadingSuffix = sellerItemsLoading && (
+    <Spin style={{ display: "flex" }} />
+  );
 
   const resetSellerItems = () => {
     dispatch(setSellerItems({ sellerItems: [] }));
