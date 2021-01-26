@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { loadApplicationSettings } from "../../actions/applicationSettingsActions";
+import TitleDivider from "../misc/TitleDivider";
 import ApplicationSettings from "./ApplicationSettings";
 import LoadItem from "./LoadItem";
 import SelectItem from "./SelectItem";
@@ -21,7 +22,7 @@ const ItemInput = () => {
   return (
     !loading && (
       <Form layout="vertical">
-        <h2>{t("editor:item-input.heading")}</h2>
+        <TitleDivider title={t("editor:item-input.heading")} level={4} />
         <ApplicationSettings />
         <SelectItem />
         <LoadItem />

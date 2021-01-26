@@ -8,3 +8,4 @@ export const SITE_ID_COOKIE_NAME = "sid";
 export const ITEM_ID_KNOWN_COOKIE_NAME = "iid-k";
 export const ITEM_ID_COOKIE_NAME = "iid";
 export const SELLER_COOKIE_NAME = "s";
+export const TEMPLATE_THEME_COOKIE_NAME = "tt";

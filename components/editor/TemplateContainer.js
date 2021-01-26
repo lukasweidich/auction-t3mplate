@@ -1,32 +1,22 @@
 import { Empty } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
-import Solstorm from "../../auction-templates/templates/Solstorm";
-import ApplyTemplateThemeAndColorsToItem from "./ApplyTemplateThemeAndColorsToItem";
-import TemplateRenderer from "./TemplateRenderer";
+import TitleDivider from "../misc/TitleDivider";
 
 const TemplateContainer = () => {
   const template = useSelector((state) => state.template);
-  const {
-    item,
-    // config: { templateName, colors, theme },
-  } = template;
+  const { templateHTML } = template;
   return (
     <div>
-      {item ? (
-        <>
-          {/* <TemplateRenderer
-          jsxElement={ApplyTemplateThemeAndColorsToItem({
-            item,
-            // template: templateName,
-            // colors,
-            // theme,
-          })}
-        /> */}
-          <Solstorm {...{ item }} />
-        </>
+      <TitleDivider title="Preview Template" level={4} />
+      {templateHTML ? (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: templateHTML,
+          }}
+        />
       ) : (
-        <Empty description="Kein Item eingeladen; bitte laden Sie ein Item ein." />
+        <Empty description="Bitte ein Template erstellen, um es ansehen und kopieren zu können." />
       )}
     </div>
   );

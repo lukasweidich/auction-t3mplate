@@ -8,3 +8,6 @@ export const prettyPrintErrorObject = (errorObject) => {
   } = errorObject;
   return message;
 };
+
+export const capitalizeFirstLetter = (string) =>
+  string.charAt(0).toUpperCase() + string.slice(1);

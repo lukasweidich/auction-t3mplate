@@ -24,8 +24,8 @@ const ApplicationSettings = () => {
   };
 
   return (
-    <Row justify="space-between">
-      <Col md={9} sm={11} xs={24}>
+    <Row gutter={[32, 32]}>
+      <Col sm={12} xs={24}>
         <Form.Item
           label={
             <Tooltip tooltipText="editor:item-input.item-number-known-tip">
@@ -39,7 +39,7 @@ const ApplicationSettings = () => {
           />
         </Form.Item>
       </Col>
-      <Col md={9} sm={11} xs={24}>
+      <Col sm={12} xs={24}>
         <Form.Item
           label={
             <Tooltip tooltipText="editor:item-input.select-ebay-country-tip">

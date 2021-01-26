@@ -6,5 +6,6 @@
     "heading": "eBay Inserat einladen",
     "item-number-known": "Inserat anhand eBay ID einladen",
     "select-ebay-country": "eBay Standort"
-  }
+  },
+  "empty": "Es wurde kein Artikel eingeladen. Bitte laden Sie zunächst einen eBay Artikel ein."
 }

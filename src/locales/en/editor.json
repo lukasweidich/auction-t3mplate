@@ -6,5 +6,6 @@
     "heading": "Load eBay listing",
     "item-number-known": "Load listing by eBay id",
     "select-ebay-country": "eBay country"
-  }
+  },
+  "empty": "No item loaded, please load an item first."
 }

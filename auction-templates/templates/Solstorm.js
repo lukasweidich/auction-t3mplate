@@ -4,22 +4,11 @@ import TemplateHeader from "../components/TemplateHeader";
 import ImagePreview from "../components/TemplateImagePreview";
 import Head from "next/head";
 import { Card, Col, ListGroup, Row, Tabs, Tab } from "react-bootstrap";
+import { defaultTheme } from "../../src/utils/constants/AtConstants";
 
-const Solstorm = ({ item, theme = "flatly", colors = [] }) => {
+const Solstorm = ({ item }) => {
   return (
     <div id="at">
-      <Head>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://www.auction-template.de/styles/bootstrap.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href={`https://www.auction-template.de/styles/${theme}.css`}
-        />
-      </Head>
       <TemplateHeader sellerName={item?.Seller.UserId} />
       <Row>
         <Col md={6} style={{ padding: "1rem" }}>

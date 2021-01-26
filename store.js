@@ -8,6 +8,7 @@ import {
   LANGUAGE_COOKIE_NAME,
   SELLER_COOKIE_NAME,
   SITE_ID_COOKIE_NAME,
+  TEMPLATE_THEME_COOKIE_NAME,
 } from "./src/utils/constants/applicationConstants";
 import { DEFAULT_SITE_ID } from "./src/utils/constants/ebayApiDefaults";
 const { composeWithDevTools } = require("redux-devtools-extension");
@@ -25,6 +26,8 @@ const itemIdIsKnownFromCookies =
 
 const sellerFromCookies = getCookie({ key: SELLER_COOKIE_NAME });
 
+const templateThemeFromCookies = getCookie({ key: TEMPLATE_THEME_COOKIE_NAME });
+
 const initialState = {
   applicationSettings: {
     language: languageFromCookies,
@@ -32,6 +35,9 @@ const initialState = {
     siteId: siteIdFromCookies,
     itemIdIsKnown: itemIdIsKnownFromCookies,
     seller: sellerFromCookies,
+  },
+  template: {
+    templateTheme: templateThemeFromCookies,
   },
 };
 
