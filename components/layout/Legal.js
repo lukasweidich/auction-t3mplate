@@ -34,10 +34,14 @@ const Legal = () => {
         </span>
       </p>
       <p>
+        © 2020-{new Date().getFullYear()} Lukas Weidich, Joyce Marvin
+        Rafflenbeul
+      </p>
+      <p>
         {withSeparator(
           [
             <>
-              © {new Date().getFullYear()}{" "}
+              {t("footer.publisher") + " "}
               <ExternalLink href="https://quikk.de">QUIKK</ExternalLink>
             </>,
             <ExternalLink href="https://quikk.de/kontakt">

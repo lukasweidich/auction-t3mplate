@@ -1,7 +1,7 @@
 import { Empty } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
-import Solstorm from "../../auction-templates/templates/solstorm";
+import Solstorm from "../../auction-templates/templates/Solstorm";
 import ApplyTemplateThemeAndColorsToItem from "./ApplyTemplateThemeAndColorsToItem";
 import TemplateRenderer from "./TemplateRenderer";
 

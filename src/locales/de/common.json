@@ -17,7 +17,8 @@
     "policies": {
       "text": "eBay Grundsätze für das Einstellen von Artikeln {{year}}",
       "url": "https://www.ebay.de/help/policies/listing-policies/listing-policies?id=4213"
-    }
+    },
+    "publisher": "herausgegeben von"
   },
   "cookies": {
     "title": "Wir verwenden Cookies.",

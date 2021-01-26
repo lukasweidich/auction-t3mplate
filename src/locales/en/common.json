@@ -17,7 +17,8 @@
     "policies": {
       "text": "eBay listing policies {{year}}",
       "url": "https://www.ebay.com/help/policies/listing-policies/listing-policies?id=4213"
-    }
+    },
+    "publisher": "published by"
   },
   "cookies": {
     "title": "We use cookies.",
