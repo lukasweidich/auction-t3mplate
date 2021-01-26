@@ -42,16 +42,16 @@ a {
   }
 }
 
-.ant-affix {
+header .ant-affix {
   z-index: var(--header-z-index);
   background-color: var(--background-color);
 }
 
-.ant-space.ant-space-vertical {
+header .ant-space.ant-space-vertical {
   width: 100%;
 }
 
-.ant-drawer-body a {
+header .ant-drawer-body a {
   display: block;
   padding: 1rem 0;
 }

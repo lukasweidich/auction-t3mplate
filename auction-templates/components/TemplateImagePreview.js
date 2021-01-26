@@ -168,14 +168,6 @@ const ImagePreview = ({
           transition: opacity 0.5s;
           margin: 0;
         }
-
-        @media only screen and (max-width: 576px) {
-           {
-            .template-grid {
-              grid-template-columns: auto auto;
-            }
-          }
-        }
       `}</style>
     </div>
   );
