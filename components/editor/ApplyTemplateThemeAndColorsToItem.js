@@ -1,5 +1,5 @@
 import React from "react";
-import Solstorm from "../../auction-templates/templates/solstorm";
+import Solstorm from "../../auction-templates/templates/Solstorm";
 
 const ApplyTemplateAndColors = ({
   item,
