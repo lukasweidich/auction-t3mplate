@@ -18,7 +18,8 @@
   "donate": {
     "title": "Support us",
     "link": "https://www.paypal.com/donate/?hosted_button_id=SBAY73ETN3HSS",
-    "text": "Support further development and the team behind Auction Template"
+    "text": "Support further development and the team behind Auction Template with a small donation on PayPal"
   },
-  "thanks": "Thank you for using and supporting Auction Template!"
+  "thanks": "Thank you for using and supporting Auction Template!",
+  "dev": "Software Developer"
 }

@@ -47,11 +47,11 @@ header .ant-affix {
   background-color: var(--background-color);
 }
 
-header .ant-space.ant-space-vertical {
+.ant-space.ant-space-vertical {
   width: 100%;
 }
 
-header .ant-drawer-body a {
+.ant-drawer-body a {
   display: block;
   padding: 1rem 0;
 }

@@ -11,35 +11,31 @@ const Legal = () => {
   return (
     <>
       <p>
-        <InternalLink href="/cookies">
-          <a> {t("cookies.manageCookies")}</a>
-        </InternalLink>
-      </p>
-      <p>
-        <span>
-          {withSeparator(
-            [
-              <InternalLink href="/imprint">
-                <a>{t("footer.imprint")}</a>
-              </InternalLink>,
-              <InternalLink href="/privacy">
-                <a>{t("footer.privacy")}</a>
-              </InternalLink>,
-              <InternalLink href="/terms">
-                <a>{t("footer.terms")}</a>
-              </InternalLink>,
-            ],
-            LINK_SEPARATOR
-          )}
-        </span>
-      </p>
-      <p>
-        © 2020-{new Date().getFullYear()} Lukas Weidich, Joyce Marvin
-        Rafflenbeul
+        {withSeparator(
+          [
+            <InternalLink href="/imprint">
+              <a>{t("footer.imprint")}</a>
+            </InternalLink>,
+            <InternalLink href="/privacy">
+              <a>{t("footer.privacy")}</a>
+            </InternalLink>,
+            <InternalLink href="/terms">
+              <a>{t("footer.terms")}</a>
+            </InternalLink>,
+            <InternalLink href="/cookies">
+              <a> {t("cookies.manageCookies")}</a>
+            </InternalLink>,
+          ],
+          LINK_SEPARATOR
+        )}
       </p>
       <p>
         {withSeparator(
           [
+            <>
+              © 2020 - {new Date().getFullYear()} Lukas Weidich, Joyce Marvin
+              Rafflenbeul
+            </>,
             <>
               {t("footer.publisher") + " "}
               <ExternalLink href="https://quikk.de">QUIKK</ExternalLink>
