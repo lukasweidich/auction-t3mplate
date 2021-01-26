@@ -13,12 +13,27 @@ import {
 import TemplateDescription from "../components/TemplateDescription";
 import TemplateHeader from "../components/TemplateHeader";
 import ImagePreview from "../components/TemplateImagePreview";
+import Head from "next/head";
 
-const Solstorm = ({ item }) => {
+const Solstorm = ({ item, theme = "flatly", colors = [] }) => {
   return (
-    <>
+    <div id="at">
+      <Head>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="../../public/styles/bootstrap.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="../../public/styles/flatly.css"
+        />
+      </Head>
+      <TemplateHeader />
       <ImagePreview images={item?.PictureURL} />
-    </>
+      <TemplateDescription />
+    </div>
   );
 };
 
