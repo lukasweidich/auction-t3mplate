@@ -4,7 +4,7 @@ import DefaultSEO from "../components/meta/DefaultSEO";
 import GetLanguageFromStore from "../components/meta/GetLanguageFromStore";
 import "../i18n";
 import "../styles/globals.css";
-import "../node_modules/antd/dist/antd.compact.css";
+import "../node_modules/antd/dist/antd.css";
 import "../node_modules/flag-icon-css/css/flag-icon.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
 
